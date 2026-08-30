@@ -94,6 +94,13 @@ class Settings(BaseSettings):
         ]
     )
 
+    # Optional, in addition to the exact-match list above. Vercel mints a new
+    # random-hash preview URL on every deploy (`project-<hash>-<user>.vercel.app`),
+    # so listing them individually doesn't scale — a regex matching the whole
+    # project's preview pattern does. `None` disables this path entirely (the
+    # exact-match list above still applies either way).
+    cors_allow_origin_regex: str | None = None
+
     @field_validator("cors_allow_origins", mode="before")
     @classmethod
     def _parse_cors_allow_origins(cls, value: object) -> object:

@@ -170,14 +170,34 @@ works, and a genuinely malformed JSON-looking value now fails with a message
 naming the variable instead of an unreadable stack trace.
 
 Include every origin the frontend can actually be served from — e.g. add a
-custom domain here too if you attach one in Vercel, and add Vercel's preview-
-deployment domain pattern if you want preview builds to work against the
-same backend. Redeploy the Railway service for the change to take effect
-(env var changes require a redeploy, not just a save).
+custom domain here too if you attach one in Vercel. Redeploy the Railway
+service for the change to take effect (env var changes require a redeploy,
+not just a save).
 
 **Do not set this to `["*"]`.** The comment in `settings.py` is explicit about
 why: this API is meant to be called only by a trusted UI, not by arbitrary
 origins.
+
+### Preview deployments
+
+Vercel mints a new random-hash URL on every preview deploy
+(`rag-agent-fund-project-<hash>-<you>.vercel.app`), so listing them one at a
+time in `MF_FAQ_CORS_ALLOW_ORIGINS` doesn't scale — you'd be back in Railway
+every time you open a PR. Use the separate regex variable instead, which
+`CORSMiddleware` checks in addition to the exact-match list:
+
+```
+MF_FAQ_CORS_ALLOW_ORIGIN_REGEX=^https://rag-agent-fund-project(-[a-z0-9]+)*\.vercel\.app$
+```
+
+Swap `rag-agent-fund-project` for your actual Vercel project slug. This one
+pattern matches both the production domain and every preview URL Vercel ever
+generates for this project, without matching anything outside it (verified:
+it does **not** match `rag-agent-fund-project.vercel.app.evil.com` or an
+unrelated domain — the trailing `$` anchor is load-bearing, don't drop it).
+Leave it unset if you don't need preview builds to reach this backend; it
+defaults to `None`, which disables this path entirely and falls back to the
+exact-match list alone.
 
 ---
 
