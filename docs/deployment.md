@@ -79,7 +79,7 @@ Set these in the Railway service's **Variables** tab:
 | Variable | Value | Required |
 |---|---|---|
 | `GROQ_API_KEY` | your Groq API key | **Yes** — generation fails without it (`Settings.require_groq_key`) |
-| `MF_FAQ_CORS_ALLOW_ORIGINS` | `["https://<your-vercel-app>.vercel.app"]` | **Yes**, once you have the Vercel URL (step 2) — see §3 |
+| `MF_FAQ_CORS_ALLOW_ORIGINS` | `https://<your-vercel-app>.vercel.app` | **Yes**, once you have the Vercel URL (step 2) — see §3 |
 | `MF_FAQ_LOG_LEVEL` | `INFO` | No — this is the default |
 
 Everything else (`MF_FAQ_MODEL`, `MF_FAQ_SIMILARITY_FLOOR`, `MF_FAQ_TOP_K`, …)
@@ -153,8 +153,21 @@ Once you have the Vercel URL from §2.3, go back to Railway's Variables and
 set:
 
 ```
-MF_FAQ_CORS_ALLOW_ORIGINS=["https://your-app.vercel.app"]
+MF_FAQ_CORS_ALLOW_ORIGINS=https://your-app.vercel.app
 ```
+
+**Enter a bare URL, or a comma-separated list for more than one** —
+`https://your-app.vercel.app,https://your-custom-domain.com`. A JSON array
+(`["https://your-app.vercel.app"]`) also still works if you prefer it. What
+does **not** work is anything else that merely *looks* like JSON but isn't
+valid JSON (a bare `[https://...]` with no quotes, for instance) — that form
+used to crash the whole app at boot with a raw `JSONDecodeError` traceback,
+because pydantic-settings tried to `json.loads()` the value before validation
+ever ran. `mf_faq/settings.py` now parses this field itself (comma-split,
+with JSON as a fallback for anyone who already has an array-shaped value), so
+the plain-URL form you'd naturally paste into a platform's env var box just
+works, and a genuinely malformed JSON-looking value now fails with a message
+naming the variable instead of an unreadable stack trace.
 
 Include every origin the frontend can actually be served from — e.g. add a
 custom domain here too if you attach one in Vercel, and add Vercel's preview-

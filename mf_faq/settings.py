@@ -14,11 +14,13 @@ point of use, not at import.
 from __future__ import annotations
 
 import functools
+import json
 import pathlib
+from typing import Annotated
 
 import yaml
-from pydantic import Field
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import Field, field_validator
+from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 from mf_faq.schemas import RefusalLinksConfig, SourcesConfig
 
@@ -73,7 +75,16 @@ class Settings(BaseSettings):
     # this API cross-origin from its own dev server / host. Defaults cover the
     # Next.js dev server; production origins are added via env, never widened
     # to "*" (P4.1's PII gate assumes requests come only from a trusted UI).
-    cors_allow_origins: list[str] = Field(
+    #
+    # `NoDecode` opts this field out of pydantic-settings' default behaviour of
+    # `json.loads`-ing a list-typed env var before validation ever runs — that
+    # default made a plain URL (`https://foo.vercel.app`, no brackets, the
+    # obvious thing to paste into a platform's env var UI) crash the app at
+    # startup with a raw `JSONDecodeError` traceback instead of a readable
+    # config error. The validator below accepts a JSON array (still valid,
+    # still documented in deployment.md) OR a comma-separated string OR a
+    # single bare origin.
+    cors_allow_origins: Annotated[list[str], NoDecode] = Field(
         default_factory=lambda: [
             "http://localhost:3000",
             "http://127.0.0.1:3000",
@@ -82,6 +93,24 @@ class Settings(BaseSettings):
             "http://127.0.0.1:3001",
         ]
     )
+
+    @field_validator("cors_allow_origins", mode="before")
+    @classmethod
+    def _parse_cors_allow_origins(cls, value: object) -> object:
+        if not isinstance(value, str):
+            return value  # already a list (e.g. the default) — leave as-is
+        stripped = value.strip()
+        if not stripped:
+            return []
+        if stripped.startswith("["):
+            try:
+                return json.loads(stripped)
+            except json.JSONDecodeError as exc:
+                raise ValueError(
+                    f"MF_FAQ_CORS_ALLOW_ORIGINS looks like a JSON array but isn't valid "
+                    f"JSON: {stripped!r}"
+                ) from exc
+        return [origin.strip() for origin in stripped.split(",") if origin.strip()]
 
     def require_groq_key(self) -> str:
         """Fetch the API key at point of use, not at import.
