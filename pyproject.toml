@@ -1,0 +1,57 @@
+[project]
+name = "mf-faq"
+version = "0.1.0"
+description = "Facts-only mutual fund FAQ assistant (RAG). Facts-only. No investment advice."
+readme = "README.md"
+
+# Python 3.14 is EXCLUDED deliberately: onnxruntime (a chromadb dependency) has
+# no 3.14 wheels, so `pip install chromadb` fails to resolve. Verified in Phase 1.
+# 3.13 resolves the full stack cleanly. Do not widen this without re-testing.
+requires-python = ">=3.11,<3.14"
+
+dependencies = [
+    # API + config
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.5",
+    "pyyaml>=6.0",
+    "httpx>=0.27",
+    # Retrieval (Phase 3)
+    "chromadb>=0.5",
+    "sentence-transformers>=3.0",
+    # Ingestion (Phase 2)
+    "beautifulsoup4>=4.12",
+    # Generation (Phase 4)
+    "groq>=0.11",
+    # NOTE: no apscheduler — scheduling is GitHub Actions (ARCH §8.1)
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.7",
+    "jsonschema>=4.20",  # validates FACT_ANSWER_SCHEMA in tests (P4.4)
+]
+
+[project.scripts]
+mf-faq-ingest = "mf_faq.ingest.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["mf_faq*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

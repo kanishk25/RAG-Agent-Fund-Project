@@ -1,0 +1,11 @@
+# Railway deployment config for the backend (see docs/deployment.md).
+# Builds with Nixpacks from the repo root — NOT frontend/, which Vercel owns.
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "uvicorn mf_faq.api.main:app --host 0.0.0.0 --port $PORT"
+healthcheckPath = "/health"
+healthcheckTimeout = 100
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 3

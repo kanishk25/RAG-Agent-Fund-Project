@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Motilal Oswal FAQ Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#a3faef",
+                        "on-tertiary-container": "#e6eaee",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#6e7977",
+                        "on-surface": "#0d1c2f",
+                        "surface-container-low": "#eff4ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#586377",
+                        "tertiary-container": "#656a6d",
+                        "surface-bright": "#f8f9ff",
+                        "background": "#f8f9ff",
+                        "on-primary-fixed": "#00201d",
+                        "tertiary-fixed-dim": "#c3c7cb",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "inverse-surface": "#233144",
+                        "inverse-on-surface": "#ebf1ff",
+                        "surface": "#f8f9ff",
+                        "on-secondary-fixed": "#111c2d",
+                        "primary-container": "#0f766e",
+                        "inverse-primary": "#80d5cb",
+                        "surface-container": "#e6eeff",
+                        "on-surface-variant": "#3e4947",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "primary": "#005c55",
+                        "secondary-container": "#d5e0f8",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#d5e3fd",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#dfe3e7",
+                        "on-tertiary-fixed": "#171c1f",
+                        "surface-container-highest": "#d5e3fd",
+                        "surface-dim": "#ccdbf4",
+                        "outline-variant": "#bdc9c6",
+                        "primary-fixed": "#9cf2e8",
+                        "tertiary": "#4d5255",
+                        "on-tertiary-fixed-variant": "#43474b",
+                        "on-primary-fixed-variant": "#00504a",
+                        "secondary": "#545f73",
+                        "on-error-container": "#93000a",
+                        "on-background": "#0d1c2f",
+                        "primary-fixed-dim": "#80d5cb",
+                        "surface-tint": "#006a63",
+                        "surface-container-high": "#dde9ff",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "20px",
+                        "base": "4px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "sm": "12px",
+                        "container-max": "1024px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "label-md": ["Geist"],
+                        "headline-md": ["Geist"],
+                        "body-md": ["Geist"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Geist', sans-serif; }
+        .card-shadow { box-shadow: 0px 4px 12px rgba(30, 41, 59, 0.05); }
+        .glass-panel { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); }
+        .skeleton-shimmer { background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-lg">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-16 max-w-container-max mx-auto bg-surface border-b border-outline-variant flat no shadows">
+<div class="flex items-center gap-xs">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Motilal Oswal FAQ</h1>
+</div>
+<div class="hidden md:flex flex-col items-end">
+<span class="bg-surface-variant text-on-surface-variant px-sm py-base rounded-full font-label-caps text-label-caps flex items-center gap-base">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                 Facts-only. No investment advice.
+             </span>
+</div>
+<div class="flex items-center gap-xs">
+<button class="p-xs text-primary hover:bg-surface-container-low rounded-full transition-colors opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">help</span>
+</button>
+<button class="p-xs text-primary hover:bg-surface-container-low rounded-full transition-colors opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-xl px-gutter max-w-[800px] mx-auto w-full">
+<!-- Welcome Section -->
+<section class="mb-xl text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-xs">How can I help you today?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Ask about NAV, expense ratio, exit load, minimum SIP, lock-in, benchmark, or holdings for 5 Motilal Oswal schemes.</p>
+</section>
+<!-- Input Area (Bento-style glass container) -->
+<section class="mb-xl glass-panel p-md rounded-xl card-shadow border border-outline-variant relative z-10">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-sm text-outline">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg py-sm pl-10 pr-24 font-body-lg text-body-lg text-on-surface focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary-fixed-dim/50 transition-all" placeholder="e.g. What is the expense ratio of Motilal Oswal ELSS Tax Saver Fund?" type="text"/>
+<button class="absolute right-sm bg-primary text-on-primary px-sm py-base rounded-lg font-label-md text-label-md hover:bg-surface-tint transition-colors flex items-center gap-base">
+                    Ask <span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+<!-- Suggestion Chips -->
+<div class="mt-sm flex flex-wrap gap-xs">
+<button class="bg-surface border border-outline-variant text-on-surface-variant font-label-md text-label-md px-sm py-base rounded-full hover:bg-surface-variant transition-colors flex items-center gap-base">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> What is the NAV of Motilal Oswal ELSS Tax Saver Fund?
+                </button>
+<button class="bg-surface border border-outline-variant text-on-surface-variant font-label-md text-label-md px-sm py-base rounded-full hover:bg-surface-variant transition-colors flex items-center gap-base">
+<span class="material-symbols-outlined text-[14px]">payments</span> What is the minimum SIP for the Nifty Next 50 Index Fund?
+                </button>
+<button class="bg-surface border border-outline-variant text-on-surface-variant font-label-md text-label-md px-sm py-base rounded-full hover:bg-surface-variant transition-colors flex items-center gap-base">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span> What is the lock-in period for the ELSS fund?
+                </button>
+</div>
+</section>
+<!-- States Feed -->
+<section class="flex flex-col gap-lg">
+<!-- Loading State -->
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant card-shadow opacity-70">
+<div class="flex items-center gap-sm mb-sm">
+<div class="w-8 h-8 rounded-full skeleton-shimmer"></div>
+<div class="h-4 w-48 rounded skeleton-shimmer"></div>
+</div>
+<div class="space-y-sm">
+<div class="h-3 w-full rounded skeleton-shimmer"></div>
+<div class="h-3 w-5/6 rounded skeleton-shimmer"></div>
+<div class="h-3 w-4/6 rounded skeleton-shimmer"></div>
+</div>
+</div>
+<!-- Answered Card -->
+<div class="bg-surface-container-lowest rounded-xl p-lg border border-outline-variant border-l-4 border-l-primary card-shadow hover:shadow-lg transition-shadow relative group">
+<div class="flex items-start gap-sm mb-sm">
+<span class="material-symbols-outlined text-primary bg-primary-container/10 p-base rounded-full">check_circle</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-[-2px]">Expense Ratio</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-md pl-10">
+                    The expense ratio for Motilal Oswal ELSS Tax Saver Fund (Direct) is <strong class="text-primary">0.72%</strong> as of last disclosure.
+                </p>
+<div class="pl-10 flex items-center justify-between mt-sm border-t border-surface-variant pt-sm">
+<a class="text-primary font-label-md text-label-md hover:underline flex items-center gap-base" href="#">
+                        Source: Groww scheme page <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+<span class="text-on-surface-variant font-label-caps text-label-caps">Last updated: Oct 24, 2023</span>
+</div>
+<!-- Interaction buttons (hidden until hover for clean UI) -->
+<div class="absolute top-sm right-sm opacity-0 group-hover:opacity-100 transition-opacity flex gap-base">
+<button class="p-base text-on-surface-variant hover:text-primary rounded hover:bg-surface-variant"><span class="material-symbols-outlined text-[18px]">thumb_up</span></button>
+<button class="p-base text-on-surface-variant hover:text-error rounded hover:bg-error-container/50"><span class="material-symbols-outlined text-[18px]">thumb_down</span></button>
+<button class="p-base text-on-surface-variant hover:text-primary rounded hover:bg-surface-variant"><span class="material-symbols-outlined text-[18px]">content_copy</span></button>
+</div>
+</div>
+<!-- Refusal Card -->
+<div class="bg-surface-variant rounded-xl p-lg border border-outline-variant card-shadow">
+<div class="flex items-start gap-sm mb-sm">
+<span class="material-symbols-outlined text-secondary bg-surface-container/50 p-base rounded-full">policy</span>
+<div>
+<p class="font-body-md text-body-md text-on-surface mb-xs mt-1">
+                            I can only provide factual data about the 5 specified Motilal Oswal schemes. I cannot offer investment advice or price predictions.
+                        </p>
+<button class="text-secondary font-label-md text-label-md border border-secondary px-sm py-base rounded-lg hover:bg-secondary/10 transition-colors flex items-center gap-base">
+                            Learn more at Investor Education <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Error State -->
+<div class="bg-surface-container-high rounded-xl p-lg border border-outline-variant card-shadow flex items-center justify-between">
+<div class="flex items-center gap-sm text-tertiary">
+<span class="material-symbols-outlined">wifi_off</span>
+<span class="font-body-md text-body-md">The assistant is temporarily unavailable. Please try again in a moment.</span>
+</div>
+<button class="bg-on-surface text-on-primary px-md py-xs rounded-lg font-label-md text-label-md hover:bg-on-surface-variant transition-colors">
+                    Retry
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-lg px-gutter mt-auto flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto bg-surface-bright border-t border-outline-variant flat no shadows">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-sm md:mb-0">
+            © 2024 Motilal Oswal Mutual Fund. Knowledge Steward Interface.
+        </div>
+<div class="flex gap-md font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Disclaimer</a>
+</div>
+</footer>
+</body></html>

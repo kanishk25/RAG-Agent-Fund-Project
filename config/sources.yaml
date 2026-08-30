@@ -1,0 +1,134 @@
+# Corpus definition — the single source of truth for what gets crawled.
+# Populated from Phase 0 findings (docs/phase0-findings.md), verified 2026-08-30.
+#
+# SHAPE: one Groww page yields MANY facts. The fetcher de-duplicates by URL
+# (one fetch per scheme per run); the registry tracks each fact separately,
+# because each carries its own source_as_of and max_age.
+#
+# FIELD ALLOWLIST (P0.4): `extract` names are an allowlist, not a hint. The
+# Groww payload also carries groww_rating, analysis[] (PROS/CONS), peerComparison[]
+# and full return series — all barred by PS §5.3. Ingesting the payload wholesale
+# would put star ratings and return comparisons into the retrieval index, where
+# they would surface as authoritative context. Only the facts listed here are
+# ever extracted.
+
+version: 1
+
+fact_source:
+  domain: groww.in            # the ONLY domain the ingestion path may fetch (ARCH §12)
+  parser: groww_scheme_page   # the only fact parser (P0.1: server-rendered __NEXT_DATA__)
+  crawl_delay_seconds: 3      # P0.5 — no Crawl-delay in robots.txt; self-imposed
+  user_agent: "mf-faq-bot/1.0 (+https://github.com/OWNER/REPO)"
+  timeout_seconds: 30
+  max_retries: 2
+
+# doc_type → freshness policy (PS §8.6, decided in P0.9).
+# max_age is measured against source_as_of, NEVER fetched_at (PS §4.5 behaviour 5).
+doc_types:
+  nav:
+    max_age_days: 1
+    unit: business_days
+    past_max_age: refuse      # a day-old NAV shown as current is simply wrong
+    date_field: nav_date
+  expense_ratio:
+    max_age_days: 45
+    past_max_age: flag
+    date_field: historic_fund_expense[max].as_on_date
+  exit_load:
+    max_age_days: 400
+    past_max_age: flag
+    date_field: historic_exit_loads[max].as_on_date
+  holdings:
+    max_age_days: 45
+    past_max_age: flag
+    date_field: holdings[].portfolio_date
+  # --- Page-level-date facts (PS §9, stakeholder decision) ---
+  # These carry no publisher date. They take the page's nav_date as source_as_of.
+  # Consequence: because nav_date advances daily, max_age can never trip, so they
+  # are gate-exempt. The date lives in METADATA ONLY and must never be rendered
+  # into fact-card text — otherwise the card changes daily, the hash changes
+  # daily, and all three re-embed every run (defeats ARCH §8.3).
+  min_sip:
+    max_age_days: null
+    past_max_age: exempt
+    date_field: nav_date
+    date_is_page_level: true
+  lock_in:
+    max_age_days: null
+    past_max_age: exempt
+    date_field: nav_date
+    date_is_page_level: true
+  benchmark:
+    max_age_days: null
+    past_max_age: exempt
+    date_field: nav_date
+    date_is_page_level: true
+
+# Facts that are IN SCOPE per PS §4.2 but NOT obtainable — queries refuse.
+# Eval coverage: eval/refusal.yaml R-oob-riskometer, R-oob-statement.
+out_of_corpus:
+  - fact: riskometer
+    reason: >
+      No reliable current-riskometer field. nfo_risk is NFO-time risk and
+      return_stats[].risk disagrees with it for the same fund; neither is dated.
+  - fact: statement_process
+    reason: Not present on Groww scheme pages in any form.
+  - fact: capital_gains_process
+    reason: Not present on Groww scheme pages in any form.
+
+schemes:
+  - scheme_id: mo_large_midcap
+    display_name: Motilal Oswal Large and Midcap Fund Direct Growth
+    category: Large & MidCap
+    url: https://groww.in/mutual-funds/motilal-oswal-large-and-midcap-fund-direct-growth
+    aliases:
+      - Motilal Oswal Large and Midcap Fund
+      - Large and Midcap Fund
+      - large midcap
+    extract: [nav, expense_ratio, exit_load, holdings, min_sip, lock_in, benchmark]
+
+  - scheme_id: mo_bse_value
+    display_name: Motilal Oswal BSE Enhanced Value Index Fund Direct Growth
+    category: Value Oriented
+    url: https://groww.in/mutual-funds/motilal-oswal-bse-enhanced-value-index-fund-direct-growth
+    aliases:
+      - Motilal Oswal BSE Enhanced Value Index Fund
+      - BSE Enhanced Value Index Fund
+      - enhanced value
+    extract: [nav, expense_ratio, exit_load, holdings, min_sip, lock_in, benchmark]
+
+  - scheme_id: mo_elss
+    display_name: Motilal Oswal ELSS Tax Saver Fund Direct Growth
+    category: ELSS
+    url: https://groww.in/mutual-funds/motilal-oswal-most-focused-long-term-fund-direct-growth
+    # P0.2 finding: the fund was RENAMED. The slug still says "most focused long
+    # term fund" but the payload reports "ELSS Tax Saver Fund". BOTH names must
+    # resolve, or in-corpus queries using either name would wrongly refuse.
+    aliases:
+      - Motilal Oswal ELSS Tax Saver Fund
+      - ELSS Tax Saver Fund
+      - Motilal Oswal Most Focused Long Term Fund
+      - Most Focused Long Term Fund
+      - motilal oswal elss
+      - elss
+    extract: [nav, expense_ratio, exit_load, holdings, min_sip, lock_in, benchmark]
+
+  - scheme_id: mo_next50
+    display_name: Motilal Oswal Nifty Next 50 Index Fund Direct Growth
+    category: Large Cap
+    url: https://groww.in/mutual-funds/motilal-oswal-nifty-next-50-index-fund-direct-growth
+    aliases:
+      - Motilal Oswal Nifty Next 50 Index Fund
+      - Nifty Next 50 Index Fund
+      - next 50
+    extract: [nav, expense_ratio, exit_load, holdings, min_sip, lock_in, benchmark]
+
+  - scheme_id: mo_bse_fin
+    display_name: Motilal Oswal BSE Financials ex Bank 30 Index Fund Direct Growth
+    category: Sectoral
+    url: https://groww.in/mutual-funds/motilal-oswal-bse-financials-ex-bank-30-index-fund-direct-growth
+    aliases:
+      - Motilal Oswal BSE Financials ex Bank 30 Index Fund
+      - BSE Financials ex Bank 30 Index Fund
+      - financials ex bank
+    extract: [nav, expense_ratio, exit_load, holdings, min_sip, lock_in, benchmark]

@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.env
+# The index IS committed (ARCH §8.2) — do not ignore data/.
+# Only local scratch is ignored:
+data/tmp/
+# SQLite WAL sidecars are transient — the .db itself IS committed (ARCH §8.2)
+data/*.db-wal
+data/*.db-shm

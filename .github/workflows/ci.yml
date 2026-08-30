@@ -1,0 +1,79 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancel superseded runs on the same branch — CI is free but not instant.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          # Pinned to 3.13: onnxruntime (via chromadb) has no 3.14 wheels, so the
+          # dependency set does not resolve there. Verified in Phase 1.
+          python-version: '3.13'
+          cache: pip
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Lint
+        run: |
+          ruff check mf_faq/ tests/
+          ruff format --check mf_faq/ tests/
+
+      - name: Test
+        # No GROQ_API_KEY is set here on purpose. Everything CI runs must work
+        # without model credentials (ARCH §8.1); a test that needs one belongs
+        # in the eval tiers, not here.
+        run: pytest tests/ -q
+
+      # Tier T0 of the eval strategy (eval.md §4): LLM-free checks that cost no
+      # tokens, so they can run on every push despite the 200K/day free-tier cap.
+      - name: Validate configs
+        run: python -c "from mf_faq.settings import validate_all_configs; validate_all_configs(); print('configs OK')"
+
+      - name: Validate eval sets
+        run: |
+          python - <<'PY'
+          import pathlib, yaml, sys
+          fail = False
+          for name in ("golden", "refusal", "ambiguity"):
+              path = pathlib.Path("eval") / f"{name}.yaml"
+              data = yaml.safe_load(path.read_text(encoding="utf-8"))
+              ids = [c["id"] for c in data["cases"]]
+              if len(ids) != len(set(ids)):
+                  print(f"FAIL {name}: duplicate ids"); fail = True
+              for case in data["cases"]:
+                  if not case.get("question"):
+                      print(f"FAIL {name}/{case['id']}: missing question"); fail = True
+              print(f"{name}: {len(ids)} cases")
+          sys.exit(1 if fail else 0)
+          PY
+
+      - name: Every refusal reason has a routing rule
+        # A reason with no route would render a refusal without its required
+        # link (PS §4.3) — caught here rather than in front of a user.
+        run: |
+          python - <<'PY'
+          import pathlib, yaml, sys
+          cases = yaml.safe_load(pathlib.Path("eval/refusal.yaml").read_text())["cases"]
+          routing = yaml.safe_load(pathlib.Path("config/refusal_links.yaml").read_text())["reason_routing"]
+          missing = sorted({c["reason"] for c in cases} - set(routing))
+          if missing:
+              print(f"FAIL: refusal reasons with no routing rule: {missing}")
+              sys.exit(1)
+          print(f"all {len({c['reason'] for c in cases})} refusal reasons routed")
+          PY

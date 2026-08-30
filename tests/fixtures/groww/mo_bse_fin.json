@@ -1,0 +1,8010 @@
+{
+ "stp_details": {
+  "amc_code": "MOTILALOSWAL_MF",
+  "amc_name": "MOTILAL OSWAL MUTUAL FUND",
+  "bse_scheme_code": "MOS2GD-GR",
+  "scheme_name": "MOTILAL OSWAL BSE FINANCIALS EX BANK 30 INDEX FUND DIRECT GROWTH",
+  "isin": "INF247L01BC9",
+  "scheme_type": "EQUITY",
+  "stp_transaction_mode": "DP",
+  "stp_in_minimum_installment_amount": 500,
+  "stp_in_maximum_installment_amount": 999999999,
+  "stp_in_multiplier_amount": 1,
+  "stp_out_minimum_installment_amount": 500,
+  "stp_out_maximum_installment_amount": 999999999,
+  "stp_out_multiplier_amount": 1,
+  "stp_minimum_installment_units": 999999,
+  "stp_maximum_installment_units": 999999,
+  "stp_multiplier_units": 999999,
+  "stp_minimum_installment_numbers": 6,
+  "stp_maximum_installment_numbers": 9999,
+  "stp_registration_in": true,
+  "stp_registration_out": true,
+  "stp_frequency": "MONTHLY",
+  "stp_dates": [
+   1,
+   7,
+   14,
+   21,
+   28
+  ],
+  "stp_minimum_gap": 0,
+  "stp_maximum_gap": 60,
+  "stp_installment_gap": 0,
+  "stp_status": 1
+ },
+ "swp_details": {
+  "amc_code": "MOTILALOSWAL_MF",
+  "amc_name": "MOTILAL OSWAL MUTUAL FUND",
+  "bse_scheme_code": "MOS2GD-GR",
+  "scheme_name": "MOTILAL OSWAL BSE FINANCIALS EX BANK 30 INDEX FUND DIRECT GROWTH",
+  "isin": "INF247L01BC9",
+  "scheme_type": "EQUITY",
+  "swp_transaction_mode": "DP",
+  "swp_minimum_installment_amount": 500,
+  "swp_maximum_installment_amount": 999999999,
+  "swp_multiplier_amount": 1,
+  "swp_minimum_installment_units": 0.001,
+  "swp_maximum_installment_units": 999999,
+  "swp_multiplier_units": 0.001,
+  "swp_minimum_installment_numbers": 12,
+  "swp_maximum_installment_numbers": 9999,
+  "swp_frequency": "MONTHLY",
+  "swp_dates": [
+   1,
+   7,
+   14,
+   21,
+   28
+  ],
+  "swp_minimum_gap": 0,
+  "swp_maximum_gap": 60,
+  "swp_installment_gap": 0,
+  "swp_status": 1
+ },
+ "investment_date_configs": [
+  {
+   "sip_start_date_time": "2022-08-04T00:00:00",
+   "sip_end_date_time": null,
+   "lumpsum_start_date_time": "2022-08-04T00:00:00",
+   "lumpsum_end_date_time": null,
+   "scheme_type": "NORMAL"
+  },
+  {
+   "sip_start_date_time": "2022-07-14T00:00:00",
+   "sip_end_date_time": "2022-07-22T14:00:00",
+   "lumpsum_start_date_time": "2022-07-14T00:00:00",
+   "lumpsum_end_date_time": "2022-07-22T23:00:00",
+   "scheme_type": "NFO"
+  }
+ ],
+ "face_value": 10,
+ "brochure_link": null,
+ "scheme_info_link": null,
+ "allotment_date": "2022-07-29",
+ "nfo_risk": "Very High",
+ "nfo_image_url": null,
+ "meta_title": "Motilal Oswal BSE Financials ex Bank 30 Index Fund Direct Growth - Groww",
+ "meta_desc": "Motilal Oswal BSE Financials ex Bank 30 Index Fund Direct Growth is Sectoral Equity mutual fund with risk-reward rating of 4/10. It has track record of 4 years, with three year return of 16.2. Risk is Very High",
+ "meta_robots": "index",
+ "amc": "MOTILAL_OSWAL",
+ "scheme_code": "150443",
+ "direct_scheme_code": "150443",
+ "regular_search_id": null,
+ "scheme_name": "Motilal Oswal BSE Financials ex Bank 30 Index Fund Direct Growth",
+ "registrar_agent": "KFin Tech",
+ "search_id": "motilal-oswal-bse-financials-ex-bank-30-index-fund-direct-growth",
+ "min_investment_amount": 500,
+ "fund_house": "Motilal Oswal Mutual Fund",
+ "fund_manager": "Rakesh Shetty",
+ "launch_date": "29-Jul-2022",
+ "mini_additional_investment": 500,
+ "sip_multiplier": 1,
+ "groww_rating": 4,
+ "crisil_rating": null,
+ "category": "Equity",
+ "rta_scheme_code": "127S2GD",
+ "exit_load": "Exit load-1%- If redeemed within 15 days from the date of allotment.",
+ "sub_category": "Sectoral",
+ "description": "The scheme seeks to provide returns that, correspond to the total returns of the securities as represented by S&P BSE Financials ex Bank 30 Index, subject to tracking error.",
+ "benchmark": "BSE Financials ex Bank 30 TRI",
+ "benchmark_name": "BSE Financials ex Bank 30 Total Return Index",
+ "aum": 32.8928,
+ "expense_ratio": "0.52",
+ "portfolio_turnover": 28,
+ "super_category": "Motilal Oswal BSE Financials ex Bank 30 Index Fund",
+ "sub_sub_category": "Banking",
+ "min_sip_investment": 500,
+ "max_sip_investment": 999999999,
+ "min_withdrawal": 1,
+ "purchase_multiplier": 1,
+ "available_for_investment": true,
+ "is_prime_investment_allowed": false,
+ "analysis": [
+  {
+   "scheme_code": "150443",
+   "analysis_type": "PROS",
+   "analysis_subject": "expense_analysis",
+   "analysis_desc": "Lower expense ratio: 0.52%",
+   "analysis_data": "0.52",
+   "rating": null
+  },
+  {
+   "scheme_code": "150443",
+   "analysis_type": "CONS",
+   "analysis_subject": "c_return_analysis",
+   "analysis_desc": "1Y annualised returns lower than category average by 6.07%",
+   "analysis_data": "c_return_analysis",
+   "rating": null
+  },
+  {
+   "scheme_code": "150443",
+   "analysis_type": "PROS",
+   "analysis_subject": "p_return_analysis",
+   "analysis_desc": "3Y annualised returns higher than category average by 1.84%",
+   "analysis_data": "p_return_analysis",
+   "rating": null
+  },
+  {
+   "scheme_code": "150443",
+   "analysis_type": "PROS",
+   "analysis_subject": "alpha_analysis",
+   "analysis_desc": "Higher alpha: 10.27 \nThe fund has generated returns higher than benchmark - BSE Financials ex Bank 30 Total Return Index - in the last 3Y ",
+   "analysis_data": "10.27159082929316",
+   "rating": null
+  }
+ ],
+ "amc_info": {
+  "amc": "MOTILAL_OSWAL",
+  "name": "Motilal Oswal Mutual Fund",
+  "address": "Motilal Oswal Towers - 10th Floor,Rahimtullah Sayani Road,Opposite Parel ST Depot, Prabhadevi, Mumbai 400025",
+  "phone": "022-39804238 / 1800-200-6626",
+  "aum": 155305.63193534,
+  "launch_date": "2009-12-28T18:30:00.891Z",
+  "email": null,
+  "rank": "19",
+  "description": "Motilal Oswal Mutual Fund started their mutual fund on 29/12/2009 and its managing total assets of ₹12,967 Cr. Its ranked at 19 as per total assets at end of 30th Sep 2017.",
+  "more_description": "<p>Motilal Oswal Asset Management Company Ltd. is the appointed Investment Manager to Motilal Oswal\nMutual Fund. It was established on 29th December, 2009 and the AMC is registered with SEBI under\nSEBI (Portfolio Managers) Regulations. Motilal Oswal is one of the most trusted brands in the Indian\nfinancial industry and the asset management company provides an array of mutual fund schemes\nranging from debt, equity and hybrid.</p>\n<p>What makes Motilal Oswal stand out is its investment philosophy, whose aim is, &quot;Buy Right: Sit Tight&quot;.\nThe AMC has certain primary objectives such as doing quality business and maintaining strong business\nethics. They also target to increase the competitive advantage of the business.</p>\n<p>They believe in the concept of &#39;buy and hold&#39;, which means, buying the right securities and holding on to\nthem so that investors can be benefited from them in the long-term.</p>",
+  "sponsor": null,
+  "trustee": null,
+  "assets_managed": null,
+  "service_officer": null,
+  "vro_amc_id": null,
+  "vro_amc_short_name": null,
+  "vro_ceo": null,
+  "vro_cio": null,
+  "vro_city": null,
+  "vro_fax": null,
+  "vro_management_trustee": null,
+  "vro_pin": null,
+  "vro_website": "http://www.motilaloswalmf.com",
+  "vro_investor_relation_officer": null,
+  "vro_owner_type": null,
+  "vro_modified_ts": null,
+  "vro_row_number": null
+ },
+ "category_info": {
+  "category": "Equity",
+  "category_helper_text": "Invests in stocks as per Contrarian investment strategy",
+  "definition": "",
+  "sub_type": "Contra",
+  "tax_impact": "If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.",
+  "description": "Contra funds follow Contrarian strategy which means investing in stocks in contrast to the prevailing sentiment. Minimum investment in equity is 65%.",
+  "tags": null
+ },
+ "stats": [
+  {
+   "type": "FUND_RETURN",
+   "stat_1y": 10.42,
+   "stat_3y": 16.2,
+   "stat_5y": null,
+   "stat_all": null,
+   "title": "Fund Returns"
+  },
+  {
+   "type": "CATEGORY_AVG_RETURN",
+   "stat_1y": 16.49444601240301,
+   "stat_3y": 14.364168654102839,
+   "stat_5y": 16.091274728282727,
+   "stat_all": null,
+   "title": "Category Average"
+  },
+  {
+   "type": "RANK_WITHIN_CATEGORY",
+   "stat_1y": 15,
+   "stat_3y": 7,
+   "stat_5y": null,
+   "stat_all": null,
+   "title": "Rank Within Category"
+  }
+ ],
+ "return_stats": [
+  {
+   "scheme_code": "150443",
+   "return1d": -0.57,
+   "return1w": -1.18,
+   "return1m": 2.95,
+   "return3m": 5.49,
+   "return6m": 1.62,
+   "return9m": null,
+   "return1y": 10.42,
+   "return2y": null,
+   "return3y": 16.2,
+   "return4y": null,
+   "return5y": null,
+   "return7y": null,
+   "return10y": null,
+   "return_default": null,
+   "mean_return": null,
+   "sharpe_ratio": 1.0143025282,
+   "beta": 0.71133915794375,
+   "standard_deviation": 14.290109137784464,
+   "risk_rating": 6,
+   "risk": "Very High",
+   "return_since_created": 16.0035943801,
+   "cat_return3m": 7.885939309683334,
+   "cat_return6m": 4.000954585778125,
+   "cat_return1y": 16.49444601240301,
+   "cat_return3y": 14.364168654102839,
+   "cat_return5y": 16.091274728282727,
+   "cat_return10y": 13.700613390445762,
+   "cat_return_since_launch": null,
+   "rank3m": 16,
+   "rank6m": 12,
+   "rank1yr": 15,
+   "rank3yr": 7,
+   "rank5yr": null,
+   "rank10yr": null,
+   "rank_count3m": null,
+   "rank_count6m": null,
+   "rank_count1yr": null,
+   "rank_count3yr": null,
+   "rank_count5yr": null,
+   "rank_count10yr": null,
+   "index_return1y": null,
+   "index_return3y": null,
+   "index_return5y": null,
+   "index_return_since_launch": null,
+   "alpha": 10.27159082929316,
+   "sortino_ratio": 1.9812827451076258,
+   "information_ratio": 0.734658,
+   "plan_id": null,
+   "vro_return_ytd": null,
+   "vro_return9m": null,
+   "vro_return2y": null,
+   "vro_return4y": null,
+   "vro_return_date": null,
+   "vro_modified_ts": null,
+   "vro_row_number": null
+  }
+ ],
+ "sip_allowed": true,
+ "lumpsum_allowed": true,
+ "doc_required": false,
+ "holdings": [
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Bajaj Finance Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 5.6205,
+   "corpus_per": 17.09,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "bajaj-finance-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Shriram Transport Finance Company Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 3.5511,
+   "corpus_per": 10.8,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "shriram-transport-finance-company-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Bajaj Finserv Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 2.2149,
+   "corpus_per": 6.73,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "bajaj-finserv-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Jio Financial Services Limited",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.6826,
+   "corpus_per": 5.12,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "jio-financial-services-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "SBI Life Insurance Company Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.6559,
+   "corpus_per": 5.03,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "sbi-life-insurance-company-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Cholamandalam Investment & Finance Company Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.5666,
+   "corpus_per": 4.76,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "cholamandalam-investment-finance-company-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Multi Commodity Exchange Of India Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.337,
+   "corpus_per": 4.06,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "multi-commodity-exchange-of-india-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Power Finance Corporation Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.2008,
+   "corpus_per": 3.65,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "power-finance-corporation-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "PB Fintech Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.1687,
+   "corpus_per": 3.55,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "pb-fintech-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "HDFC Life Insurance Co Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.1529,
+   "corpus_per": 3.51,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "hdfc-standard-life-insurance-co-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "One 97 Communications Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Industrials",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.1037,
+   "corpus_per": 3.36,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "one-communications-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "HDFC Asset Management Company Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 1.0264,
+   "corpus_per": 3.12,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "hdfc-asset-management-company-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Bajaj Holdings & Investment Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.9344,
+   "corpus_per": 2.84,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "bajaj-holdings-investment-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "REC Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.9001,
+   "corpus_per": 2.74,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "rec-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "ICICI Lombard General Insurance Company Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.7735,
+   "corpus_per": 2.35,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "icici-lombard-general-insurance-co-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Max Financial Services Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.7654,
+   "corpus_per": 2.33,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "max-financial-services-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Muthoot Finance Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.659,
+   "corpus_per": 2,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "muthoot-finance-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Aditya Birla Capital Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.6403,
+   "corpus_per": 1.95,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "aditya-birla-capital-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "IIFL Wealth Management Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.5574,
+   "corpus_per": 1.69,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "iifl-wealth-management-ltd-1568865430949"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "L&T Finance Holdings Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.5166,
+   "corpus_per": 1.57,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "lt-finance-holdings-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Mahindra & Mahindra Financial Services Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.4914,
+   "corpus_per": 1.49,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "mahindra-mahindra-financial-services-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "DEWAN HOUSING FINANCE CORP. LTD. EQ",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.4808,
+   "corpus_per": 1.46,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "dewan-housing-finance-corporation-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Life Insurance Corporation of India",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.4188,
+   "corpus_per": 1.27,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "life-insurance-corporation-of-india"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Nippon Life India Asset Management Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.4044,
+   "corpus_per": 1.23,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "reliance-nippon-life-asset-management-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "ICICI Prudential Life Insurance Company Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.3933,
+   "corpus_per": 1.2,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "icici-prudential-life-insurance-company-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "SBI Cards & Payments Services Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.3794,
+   "corpus_per": 1.15,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "sbi-cards-payment-services-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Indian Railway Finance Corporation Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.3406,
+   "corpus_per": 1.04,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "indian-railway-finance-corporation-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Poonawalla Fincorp Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.3176,
+   "corpus_per": 0.97,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "magma-fincorp-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "LIC Housing Finance Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.3027,
+   "corpus_per": 0.92,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "lic-housing-finance-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "General Insurance Corporation of India Ltd",
+   "nature_name": "EQUITY",
+   "sector_name": "Financial",
+   "instrument_name": "Equity",
+   "rating": null,
+   "market_value": 0.2194,
+   "corpus_per": 0.67,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": "general-insurance-corporation-of-india-ltd"
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Repo",
+   "nature_name": "CASH",
+   "sector_name": "Unspecified",
+   "instrument_name": "Repo",
+   "rating": null,
+   "market_value": 0.14,
+   "corpus_per": 0.43,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": null
+  },
+  {
+   "scheme_code": "150443",
+   "portfolio_date": "2026-07-30T18:30:00.000Z",
+   "company_name": "Net Payables",
+   "nature_name": "CASH",
+   "sector_name": "Unspecified",
+   "instrument_name": "Net Payables",
+   "rating": null,
+   "market_value": -0.0234,
+   "corpus_per": -0.08,
+   "market_cap": null,
+   "rating_market_cap": null,
+   "stock_search_id": null
+  }
+ ],
+ "nav": 18.3384,
+ "nav_date": "28-Aug-2026",
+ "plan_type": "Direct",
+ "scheme_type": "Growth",
+ "alternate_scheme_type": null,
+ "video_url": null,
+ "fund_manager_details": [
+  {
+   "scheme_code": "150443",
+   "plan_id": null,
+   "date_from": "2022-07-13T18:30:00.000Z",
+   "person_id": null,
+   "person_name": "Swapnil P Mayekar",
+   "education": "Mr. Mayekar is an M.Com from Mumbai University and also holds an Advanced Diploma in Business Administration from Welingkar, Mumbai.",
+   "experience": "Prior to joining Motilal Oswal AMC  he worked with Business Standard Limited from Aug 2005 to Feb 2010.",
+   "funds_managed": [
+    {
+     "scheme_name": "Motilal Oswal Focused Fund Direct Growth",
+     "scheme_code": "122389",
+     "search_id": "motilal-oswal-most-focused-25-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Midcap Fund Direct Growth",
+     "scheme_code": "127042",
+     "search_id": "motilal-oswal-most-focused-midcap-30-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Flexi Cap Fund Direct Growth",
+     "scheme_code": "129046",
+     "search_id": "motilal-oswal-most-focused-multicap-35-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Balanced Advantage Fund Direct Growth",
+     "scheme_code": "139872",
+     "search_id": "motilal-oswal-balanced-advantage-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nasdaq 100 FOF Direct Growth",
+     "scheme_code": "145552",
+     "search_id": "motilal-oswal-nasdaq-100-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Bank Index Fund Direct Growth",
+     "scheme_code": "147620",
+     "search_id": "motilal-oswal-nifty-bank-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Midcap 150 Index Fund Direct Growth",
+     "scheme_code": "147622",
+     "search_id": "motilal-oswal-nifty-midcap-150-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Smallcap 250 Index Fund Direct Growth",
+     "scheme_code": "147623",
+     "search_id": "motilal-oswal-nifty-smallcap-250-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 500 Index Fund Direct Growth",
+     "scheme_code": "147625",
+     "search_id": "motilal-oswal-nifty-500-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Large and Midcap Fund Direct Growth",
+     "scheme_code": "147704",
+     "search_id": "motilal-oswal-large-and-midcap-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Next 50 Index Fund Direct Growth",
+     "scheme_code": "147796",
+     "search_id": "motilal-oswal-nifty-next-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 50 Index Fund Direct Growth",
+     "scheme_code": "147794",
+     "search_id": "motilal-oswal-nifty-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal S&P 500 Index Fund Direct Growth",
+     "scheme_code": "148381",
+     "search_id": "motilal-oswal-s-p-500-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Multi Asset Passive FoF Direct Growth",
+     "scheme_code": "148747",
+     "search_id": "motilal-oswal-multi-asset-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Asset Allocation Passive FoF Conservative Direct Growth",
+     "scheme_code": "148750",
+     "search_id": "motilal-oswal-asset-allocation-passive-fof-conservative-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 200 Momentum 30 Index Fund Direct Growth",
+     "scheme_code": "149800",
+     "search_id": "motilal-oswal-nifty-200-momentum-30-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Low Volatility Index Fund Direct Growth",
+     "scheme_code": "149919",
+     "search_id": "motilal-oswal-bse-low-volatility-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Financials ex Bank 30 Index Fund Direct Growth",
+     "scheme_code": "150443",
+     "search_id": "motilal-oswal-bse-financials-ex-bank-30-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Enhanced Value Index Fund Direct Growth",
+     "scheme_code": "150518",
+     "search_id": "motilal-oswal-bse-enhanced-value-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Quality Index Fund Direct Growth",
+     "scheme_code": "150521",
+     "search_id": "motilal-oswal-bse-quality-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Gold and Silver Passive FoF Direct Growth",
+     "scheme_code": "150642",
+     "search_id": "motilal-oswal-gold-and-silver-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Microcap 250 Index Fund Direct Growth",
+     "scheme_code": "151814",
+     "search_id": "motilal-oswal-nifty-microcap-250-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Developed Market Ex US ETFs Overseas Equity Passive FoF Direct Growth",
+     "scheme_code": "152090",
+     "search_id": "motilal-oswal-developed-market-ex-us-etfs-overseas-equity-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Small Cap Fund Direct Growth",
+     "scheme_code": "152237",
+     "search_id": "motilal-oswal-small-cap-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Large Cap Fund Direct Growth",
+     "scheme_code": "152354",
+     "search_id": "motilal-oswal-large-cap-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Multi Cap Fund Direct Growth",
+     "scheme_code": "152651",
+     "search_id": "motilal-oswal-multi-cap-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty India Defence Index Fund Direct Growth",
+     "scheme_code": "152712",
+     "search_id": "motilal-oswal-nifty-india-defence-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Manufacturing Fund Direct Growth",
+     "scheme_code": "152760",
+     "search_id": "motilal-oswal-manufacturing-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Business Cycle Fund Direct Growth",
+     "scheme_code": "152796",
+     "search_id": "motilal-oswal-business-cycle-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 500 Momentum 50 Index Fund Direct Growth",
+     "scheme_code": "152875",
+     "search_id": "motilal-oswal-nifty-500-momentum-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Digital India Fund Direct Growth",
+     "scheme_code": "152964",
+     "search_id": "motilal-oswal-digital-india-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall India Consumption Index Fund Direct Growth",
+     "scheme_code": "153025",
+     "search_id": "motilal-oswal-nifty-midsmall-india-consumption-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall Financial Services Index Fund Direct Growth",
+     "scheme_code": "153027",
+     "search_id": "motilal-oswal-nifty-midsmall-financial-services-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall IT and Telecom Index Fund Direct Growth",
+     "scheme_code": "153029",
+     "search_id": "motilal-oswal-nifty-midsmall-it-and-tel-com-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall Healthcare Index Fund Direct Growth",
+     "scheme_code": "153023",
+     "search_id": "motilal-oswal-nifty-midsmall-healthcare-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Capital Market Index Fund Direct Growth",
+     "scheme_code": "153138",
+     "search_id": "motilal-oswal-nifty-capital-market-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Innovation Opportunities Fund Direct Growth",
+     "scheme_code": "153258",
+     "search_id": "motilal-oswal-innovation-opportunities-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Infrastructure Fund Direct Growth",
+     "scheme_code": "153484",
+     "search_id": "motilal-oswal-infrastructure-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Services Fund Direct Growth",
+     "scheme_code": "153558",
+     "search_id": "motilal-oswal-services-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE 1000 Index Fund Direct Growth",
+     "scheme_code": "153596",
+     "search_id": "motilal-oswal-bse-1000-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Special Opportunities Fund Direct Growth",
+     "scheme_code": "153749",
+     "search_id": "motilal-oswal-special-opportunities-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Consumption Fund Direct Growth",
+     "scheme_code": "153913",
+     "search_id": "motilal-oswal-consumption-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Diversified Equity Flexicap Passive FoF Direct Growth",
+     "scheme_code": "154112",
+     "search_id": "motilal-oswal-diversified-equity-flexicap-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Financial Services Fund Direct Growth",
+     "scheme_code": "154142",
+     "search_id": "motilal-oswal-financial-services-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Multi Factor Passive FoF Direct Growth",
+     "scheme_code": "154239",
+     "search_id": "motilal-oswal-multi-factor-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Contra Fund Direct Growth",
+     "scheme_code": "154337",
+     "search_id": "motilal-oswal-contra-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Clean Environment Index Fund Direct Growth",
+     "scheme_code": "154364",
+     "search_id": "motilal-oswal-bse-clean-environment-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Midcap 150 Momentum 30 Index Fund Direct Growth",
+     "scheme_code": "154377",
+     "search_id": "motilal-oswal-bse-midcap-150-momentum-30-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Quality Fund Direct Growth",
+     "scheme_code": "154668",
+     "search_id": "motilal-oswal-quality-fund-direct-growth"
+    }
+   ]
+  },
+  {
+   "scheme_code": "150443",
+   "plan_id": null,
+   "date_from": "2022-11-21T18:30:00.000Z",
+   "person_id": null,
+   "person_name": "Rakesh Shetty",
+   "education": "Mr. Shetty has done B.Com",
+   "experience": "Prior to joining Motilal Oswal Mutual Fund, he has worked with Company engaged in Capital Market Business wherein he was in charge of equity and debt ETFs, customized indices and has also been part of product development.",
+   "funds_managed": [
+    {
+     "scheme_name": "Motilal Oswal Focused Fund Direct Growth",
+     "scheme_code": "122389",
+     "search_id": "motilal-oswal-most-focused-25-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Ultra Short Term Fund Direct Growth",
+     "scheme_code": "124234",
+     "search_id": "motilal-oswal-most-ultra-short-term-bond-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Midcap Fund Direct Growth",
+     "scheme_code": "127042",
+     "search_id": "motilal-oswal-most-focused-midcap-30-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Flexi Cap Fund Direct Growth",
+     "scheme_code": "129046",
+     "search_id": "motilal-oswal-most-focused-multicap-35-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal ELSS Tax Saver Fund Direct Growth",
+     "scheme_code": "133386",
+     "search_id": "motilal-oswal-most-focused-long-term-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Balanced Advantage Fund Direct Growth",
+     "scheme_code": "139872",
+     "search_id": "motilal-oswal-balanced-advantage-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nasdaq 100 FOF Direct Growth",
+     "scheme_code": "145552",
+     "search_id": "motilal-oswal-nasdaq-100-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Liquid Fund Direct Growth",
+     "scheme_code": "145834",
+     "search_id": "motilal-oswal-liquid-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Bank Index Fund Direct Growth",
+     "scheme_code": "147620",
+     "search_id": "motilal-oswal-nifty-bank-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Midcap 150 Index Fund Direct Growth",
+     "scheme_code": "147622",
+     "search_id": "motilal-oswal-nifty-midcap-150-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Smallcap 250 Index Fund Direct Growth",
+     "scheme_code": "147623",
+     "search_id": "motilal-oswal-nifty-smallcap-250-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 500 Index Fund Direct Growth",
+     "scheme_code": "147625",
+     "search_id": "motilal-oswal-nifty-500-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Large and Midcap Fund Direct Growth",
+     "scheme_code": "147704",
+     "search_id": "motilal-oswal-large-and-midcap-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Next 50 Index Fund Direct Growth",
+     "scheme_code": "147796",
+     "search_id": "motilal-oswal-nifty-next-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 50 Index Fund Direct Growth",
+     "scheme_code": "147794",
+     "search_id": "motilal-oswal-nifty-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal S&P 500 Index Fund Direct Growth",
+     "scheme_code": "148381",
+     "search_id": "motilal-oswal-s-p-500-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Multi Asset Passive FoF Direct Growth",
+     "scheme_code": "148747",
+     "search_id": "motilal-oswal-multi-asset-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Asset Allocation Passive FoF Conservative Direct Growth",
+     "scheme_code": "148750",
+     "search_id": "motilal-oswal-asset-allocation-passive-fof-conservative-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal 5 Year G Sec FoF Direct Growth",
+     "scheme_code": "149240",
+     "search_id": "motilal-oswal-5-year-g-sec-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 200 Momentum 30 Index Fund Direct Growth",
+     "scheme_code": "149800",
+     "search_id": "motilal-oswal-nifty-200-momentum-30-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Low Volatility Index Fund Direct Growth",
+     "scheme_code": "149919",
+     "search_id": "motilal-oswal-bse-low-volatility-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Financials ex Bank 30 Index Fund Direct Growth",
+     "scheme_code": "150443",
+     "search_id": "motilal-oswal-bse-financials-ex-bank-30-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Enhanced Value Index Fund Direct Growth",
+     "scheme_code": "150518",
+     "search_id": "motilal-oswal-bse-enhanced-value-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Quality Index Fund Direct Growth",
+     "scheme_code": "150521",
+     "search_id": "motilal-oswal-bse-quality-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Gold and Silver Passive FoF Direct Growth",
+     "scheme_code": "150642",
+     "search_id": "motilal-oswal-gold-and-silver-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Microcap 250 Index Fund Direct Growth",
+     "scheme_code": "151814",
+     "search_id": "motilal-oswal-nifty-microcap-250-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Developed Market Ex US ETFs Overseas Equity Passive FoF Direct Growth",
+     "scheme_code": "152090",
+     "search_id": "motilal-oswal-developed-market-ex-us-etfs-overseas-equity-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Small Cap Fund Direct Growth",
+     "scheme_code": "152237",
+     "search_id": "motilal-oswal-small-cap-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Large Cap Fund Direct Growth",
+     "scheme_code": "152354",
+     "search_id": "motilal-oswal-large-cap-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Multi Cap Fund Direct Growth",
+     "scheme_code": "152651",
+     "search_id": "motilal-oswal-multi-cap-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Quant Fund Direct Growth",
+     "scheme_code": "152694",
+     "search_id": "motilal-oswal-quant-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty India Defence Index Fund Direct Growth",
+     "scheme_code": "152712",
+     "search_id": "motilal-oswal-nifty-india-defence-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Manufacturing Fund Direct Growth",
+     "scheme_code": "152760",
+     "search_id": "motilal-oswal-manufacturing-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Business Cycle Fund Direct Growth",
+     "scheme_code": "152796",
+     "search_id": "motilal-oswal-business-cycle-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 500 Momentum 50 Index Fund Direct Growth",
+     "scheme_code": "152875",
+     "search_id": "motilal-oswal-nifty-500-momentum-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Digital India Fund Direct Growth",
+     "scheme_code": "152964",
+     "search_id": "motilal-oswal-digital-india-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall India Consumption Index Fund Direct Growth",
+     "scheme_code": "153025",
+     "search_id": "motilal-oswal-nifty-midsmall-india-consumption-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall Financial Services Index Fund Direct Growth",
+     "scheme_code": "153027",
+     "search_id": "motilal-oswal-nifty-midsmall-financial-services-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall IT and Telecom Index Fund Direct Growth",
+     "scheme_code": "153029",
+     "search_id": "motilal-oswal-nifty-midsmall-it-and-tel-com-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall Healthcare Index Fund Direct Growth",
+     "scheme_code": "153023",
+     "search_id": "motilal-oswal-nifty-midsmall-healthcare-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Capital Market Index Fund Direct Growth",
+     "scheme_code": "153138",
+     "search_id": "motilal-oswal-nifty-capital-market-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Arbitrage Fund Direct Growth",
+     "scheme_code": "153187",
+     "search_id": "motilal-oswal-arbitrage-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Innovation Opportunities Fund Direct Growth",
+     "scheme_code": "153258",
+     "search_id": "motilal-oswal-innovation-opportunities-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Active Momentum Fund Direct Growth",
+     "scheme_code": "153364",
+     "search_id": "motilal-oswal-active-momentum-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Infrastructure Fund Direct Growth",
+     "scheme_code": "153484",
+     "search_id": "motilal-oswal-infrastructure-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Services Fund Direct Growth",
+     "scheme_code": "153558",
+     "search_id": "motilal-oswal-services-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE 1000 Index Fund Direct Growth",
+     "scheme_code": "153596",
+     "search_id": "motilal-oswal-bse-1000-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Special Opportunities Fund Direct Growth",
+     "scheme_code": "153749",
+     "search_id": "motilal-oswal-special-opportunities-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Consumption Fund Direct Growth",
+     "scheme_code": "153913",
+     "search_id": "motilal-oswal-consumption-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Diversified Equity Flexicap Passive FoF Direct Growth",
+     "scheme_code": "154112",
+     "search_id": "motilal-oswal-diversified-equity-flexicap-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Financial Services Fund Direct Growth",
+     "scheme_code": "154142",
+     "search_id": "motilal-oswal-financial-services-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Multi Factor Passive FoF Direct Growth",
+     "scheme_code": "154239",
+     "search_id": "motilal-oswal-multi-factor-passive-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Contra Fund Direct Growth",
+     "scheme_code": "154337",
+     "search_id": "motilal-oswal-contra-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Clean Environment Index Fund Direct Growth",
+     "scheme_code": "154364",
+     "search_id": "motilal-oswal-bse-clean-environment-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Midcap 150 Momentum 30 Index Fund Direct Growth",
+     "scheme_code": "154377",
+     "search_id": "motilal-oswal-bse-midcap-150-momentum-30-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Quality Fund Direct Growth",
+     "scheme_code": "154668",
+     "search_id": "motilal-oswal-quality-fund-direct-growth"
+    }
+   ]
+  },
+  {
+   "scheme_code": "150443",
+   "plan_id": null,
+   "date_from": "2024-10-14T18:30:00.000Z",
+   "person_id": null,
+   "person_name": "Dishant Mehta",
+   "education": "Bachelors of Science (B.SC)",
+   "experience": "Mr. Dishant Mehta has more than 11 years of experience and expertise in Financial markets across different segment -Equities, Derivatives, Commodities and Currencies",
+   "funds_managed": [
+    {
+     "scheme_name": "Motilal Oswal Nasdaq 100 FOF Direct Growth",
+     "scheme_code": "145552",
+     "search_id": "motilal-oswal-nasdaq-100-fof-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Bank Index Fund Direct Growth",
+     "scheme_code": "147620",
+     "search_id": "motilal-oswal-nifty-bank-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Midcap 150 Index Fund Direct Growth",
+     "scheme_code": "147622",
+     "search_id": "motilal-oswal-nifty-midcap-150-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Smallcap 250 Index Fund Direct Growth",
+     "scheme_code": "147623",
+     "search_id": "motilal-oswal-nifty-smallcap-250-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 500 Index Fund Direct Growth",
+     "scheme_code": "147625",
+     "search_id": "motilal-oswal-nifty-500-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Next 50 Index Fund Direct Growth",
+     "scheme_code": "147796",
+     "search_id": "motilal-oswal-nifty-next-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 50 Index Fund Direct Growth",
+     "scheme_code": "147794",
+     "search_id": "motilal-oswal-nifty-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal S&P 500 Index Fund Direct Growth",
+     "scheme_code": "148381",
+     "search_id": "motilal-oswal-s-p-500-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 200 Momentum 30 Index Fund Direct Growth",
+     "scheme_code": "149800",
+     "search_id": "motilal-oswal-nifty-200-momentum-30-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Low Volatility Index Fund Direct Growth",
+     "scheme_code": "149919",
+     "search_id": "motilal-oswal-bse-low-volatility-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Financials ex Bank 30 Index Fund Direct Growth",
+     "scheme_code": "150443",
+     "search_id": "motilal-oswal-bse-financials-ex-bank-30-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Enhanced Value Index Fund Direct Growth",
+     "scheme_code": "150518",
+     "search_id": "motilal-oswal-bse-enhanced-value-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Quality Index Fund Direct Growth",
+     "scheme_code": "150521",
+     "search_id": "motilal-oswal-bse-quality-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Microcap 250 Index Fund Direct Growth",
+     "scheme_code": "151814",
+     "search_id": "motilal-oswal-nifty-microcap-250-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty India Defence Index Fund Direct Growth",
+     "scheme_code": "152712",
+     "search_id": "motilal-oswal-nifty-india-defence-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty 500 Momentum 50 Index Fund Direct Growth",
+     "scheme_code": "152875",
+     "search_id": "motilal-oswal-nifty-500-momentum-50-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall India Consumption Index Fund Direct Growth",
+     "scheme_code": "153025",
+     "search_id": "motilal-oswal-nifty-midsmall-india-consumption-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall Financial Services Index Fund Direct Growth",
+     "scheme_code": "153027",
+     "search_id": "motilal-oswal-nifty-midsmall-financial-services-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall IT and Telecom Index Fund Direct Growth",
+     "scheme_code": "153029",
+     "search_id": "motilal-oswal-nifty-midsmall-it-and-tel-com-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty MidSmall Healthcare Index Fund Direct Growth",
+     "scheme_code": "153023",
+     "search_id": "motilal-oswal-nifty-midsmall-healthcare-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal Nifty Capital Market Index Fund Direct Growth",
+     "scheme_code": "153138",
+     "search_id": "motilal-oswal-nifty-capital-market-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE 1000 Index Fund Direct Growth",
+     "scheme_code": "153596",
+     "search_id": "motilal-oswal-bse-1000-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Clean Environment Index Fund Direct Growth",
+     "scheme_code": "154364",
+     "search_id": "motilal-oswal-bse-clean-environment-index-fund-direct-growth"
+    },
+    {
+     "scheme_name": "Motilal Oswal BSE Midcap 150 Momentum 30 Index Fund Direct Growth",
+     "scheme_code": "154377",
+     "search_id": "motilal-oswal-bse-midcap-150-momentum-30-index-fund-direct-growth"
+    }
+   ]
+  }
+ ],
+ "rta_details": {
+  "custodian_name": "Deutsche Bank",
+  "rta_name": "KFin Tech",
+  "address": "Karvy House, No. 46, 8-2-609/K, Avenue 4,  Street No.1 Banjara Hills,",
+  "email": "mfshyderabad@kfintech.com",
+  "website": "www.karvymfs.com"
+ },
+ "fund_news": null,
+ "fund_events": null,
+ "logo_url": "https://assets-netstorage.groww.in/mf-assets/logos/motilal_groww.png",
+ "sid_url": "https://www.motilaloswalmf.com",
+ "amc_page_url": "https://groww.in/mutual-funds/amc/motilal-oswal-mutual-funds",
+ "isin": "INF247L01BC9",
+ "groww_scheme_code": "INF247L01BC9",
+ "stamp_duty": "0.005% (from July 1st, 2020)",
+ "dividend": null,
+ "sip_return": {
+  "scheme_code": "150443",
+  "return1d": null,
+  "return1w": null,
+  "return1m": null,
+  "return3m": 19.17006617900382,
+  "return6m": -4.523684820222278,
+  "return9m": -2.906376500985466,
+  "return1y": -1.1791396479044849,
+  "return2y": 5.616645924827352,
+  "return3y": 10.20090590416475,
+  "return4y": null,
+  "return5y": null,
+  "return7y": null,
+  "return10y": null,
+  "return_default": null,
+  "mean_return": null,
+  "sharpe_ratio": null,
+  "beta": null,
+  "standard_deviation": null,
+  "risk_rating": null,
+  "risk": null,
+  "return_since_created": null,
+  "cat_return3m": null,
+  "cat_return6m": null,
+  "cat_return1y": null,
+  "cat_return3y": null,
+  "cat_return5y": null,
+  "cat_return10y": null,
+  "cat_return_since_launch": null,
+  "rank3m": null,
+  "rank6m": null,
+  "rank1yr": null,
+  "rank3yr": null,
+  "rank5yr": null,
+  "rank10yr": null,
+  "rank_count3m": null,
+  "rank_count6m": null,
+  "rank_count1yr": null,
+  "rank_count3yr": null,
+  "rank_count5yr": null,
+  "rank_count10yr": null,
+  "index_return1y": null,
+  "index_return3y": null,
+  "index_return5y": null,
+  "index_return_since_launch": null,
+  "alpha": null,
+  "sortino_ratio": null,
+  "information_ratio": null,
+  "plan_id": null,
+  "vro_return_ytd": null,
+  "vro_return9m": null,
+  "vro_return2y": null,
+  "vro_return4y": null,
+  "vro_return_date": null,
+  "vro_modified_ts": null,
+  "vro_row_number": null
+ },
+ "simple_return": {
+  "scheme_code": "150443",
+  "return1d": 0.4144864643,
+  "return1w": 1.074068224,
+  "return1m": 3.7595960838,
+  "return3m": 8.3916451526,
+  "return6m": 1.4281810232,
+  "return9m": 2.9154373433,
+  "return1y": 7.3594751579,
+  "return2y": 17.256827286398,
+  "return3y": 61.706707099225,
+  "return4y": 81.652929775445,
+  "return5y": null,
+  "return7y": null,
+  "return10y": null,
+  "return_default": null,
+  "mean_return": null,
+  "sharpe_ratio": null,
+  "beta": null,
+  "standard_deviation": null,
+  "risk_rating": null,
+  "risk": null,
+  "return_since_created": 85.573,
+  "cat_return3m": null,
+  "cat_return6m": null,
+  "cat_return1y": 16.494446012403017,
+  "cat_return3y": 49.57876114143262,
+  "cat_return5y": 110.86179525595345,
+  "cat_return10y": null,
+  "cat_return_since_launch": null,
+  "rank3m": null,
+  "rank6m": null,
+  "rank1yr": null,
+  "rank3yr": null,
+  "rank5yr": null,
+  "rank10yr": null,
+  "rank_count3m": null,
+  "rank_count6m": null,
+  "rank_count1yr": null,
+  "rank_count3yr": null,
+  "rank_count5yr": null,
+  "rank_count10yr": null,
+  "index_return1y": null,
+  "index_return3y": null,
+  "index_return5y": null,
+  "index_return_since_launch": null,
+  "alpha": null,
+  "sortino_ratio": null,
+  "information_ratio": null,
+  "plan_id": null,
+  "vro_return_ytd": null,
+  "vro_return9m": null,
+  "vro_return2y": null,
+  "vro_return4y": null,
+  "vro_return_date": null,
+  "vro_modified_ts": null,
+  "vro_row_number": null
+ },
+ "lock_in": {
+  "years": null,
+  "months": null,
+  "days": null
+ },
+ "historic_exit_loads": [
+  {
+   "cdsc": true,
+   "note": "Exit load-1%- If redeemed within 15 days from the date of allotment.",
+   "as_on_date": "2022-07-14T05:30:00",
+   "front_load": 0,
+   "back_load": 0
+  },
+  {
+   "cdsc": true,
+   "note": "Exit load-1%- If redeemed within 15 days from the date of allotment.",
+   "as_on_date": "2022-07-14T05:30:00",
+   "front_load": 0,
+   "back_load": 0
+  },
+  {
+   "cdsc": true,
+   "note": "Exit load-1%- If redeemed within 15 days from the date of allotment.",
+   "as_on_date": "2022-07-14T00:00:00",
+   "front_load": 0,
+   "back_load": 0
+  }
+ ],
+ "historic_fund_expense": [
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-08-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.53,
+   "as_on_date": "2026-07-31T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.53,
+   "as_on_date": "2026-07-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.53,
+   "as_on_date": "2026-07-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.53,
+   "as_on_date": "2026-07-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.53,
+   "as_on_date": "2026-07-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-07-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-06-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 28
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-06-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 28
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.47,
+   "as_on_date": "2026-05-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.5,
+   "as_on_date": "2026-05-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-05-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.44,
+   "as_on_date": "2026-05-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-05-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.44,
+   "as_on_date": "2026-05-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-05-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.44,
+   "as_on_date": "2026-05-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.67,
+   "as_on_date": "2026-05-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.51,
+   "as_on_date": "2026-05-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.53,
+   "as_on_date": "2026-05-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.5,
+   "as_on_date": "2026-05-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.5,
+   "as_on_date": "2026-05-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.59,
+   "as_on_date": "2026-05-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-05-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.64,
+   "as_on_date": "2026-04-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 35
+  },
+  {
+   "expense_ratio": 0.54,
+   "as_on_date": "2026-04-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.51,
+   "as_on_date": "2026-04-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.46,
+   "as_on_date": "2026-04-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.51,
+   "as_on_date": "2026-04-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.44,
+   "as_on_date": "2026-04-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.54,
+   "as_on_date": "2026-04-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.48,
+   "as_on_date": "2026-04-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.53,
+   "as_on_date": "2026-04-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.7,
+   "as_on_date": "2026-04-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.53,
+   "as_on_date": "2026-04-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.52,
+   "as_on_date": "2026-04-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.74,
+   "as_on_date": "2026-04-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.39,
+   "as_on_date": "2026-04-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.68,
+   "as_on_date": "2026-04-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.7,
+   "as_on_date": "2026-04-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 39
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-03-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-02-28T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 36
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-02-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.4,
+   "as_on_date": "2026-02-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-02-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 37
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2026-01-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2026-01-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 34
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-12-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 43
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2025-11-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2025-11-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2025-11-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.42,
+   "as_on_date": "2025-11-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-11-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 44
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-10-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 47
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-09-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 44
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-08-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 47
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-07-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 51
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-06-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 54
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.43,
+   "as_on_date": "2025-05-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.34,
+   "as_on_date": "2025-04-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": 44
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-04-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-04-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-03-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-28T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-02-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2025-01-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-12-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-11-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-10-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-09-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-08-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-07-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-06-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-05-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-04-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-03-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-29T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-02-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2024-01-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-31T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-12-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-11-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-10-31T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-30T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-10-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-29T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-28T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-27T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-26T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-25T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-24T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-23T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-22T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-21T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-20T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-19T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-18T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-17T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-16T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-15T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-14T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-13T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-12T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-11T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-10T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-09T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-08T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-07T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-06T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-05T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-04T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-03T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-02T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-09-01T00:00:00",
+   "frequency": "Daily",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-08-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-07-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-06-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-05-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.3,
+   "as_on_date": "2023-04-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-03-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-02-28T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.31,
+   "as_on_date": "2023-01-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-12-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-12-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-12-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-11-30T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-11-30T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-11-30T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-11-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-10-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-10-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-10-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-10-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-10-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-09-30T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-09-30T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-09-30T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-09-30T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-08-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-08-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.28,
+   "as_on_date": "2022-08-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.29,
+   "as_on_date": "2022-07-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.29,
+   "as_on_date": "2022-07-31T05:30:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  },
+  {
+   "expense_ratio": 0.29,
+   "as_on_date": "2022-07-31T00:00:00",
+   "frequency": "Monthly",
+   "turn_over_ratio": null
+  }
+ ],
+ "closed_scheme": false,
+ "closed_date": null,
+ "additional_details": null,
+ "restricted_tax_statuses": null,
+ "conditional_maximum_purchase_amount_details": null,
+ "conditional_maximum_sip_amount_details": null,
+ "prod_code": "127S2GDG",
+ "stp_flag": false,
+ "swp_flag": false,
+ "switch_flag": false,
+ "redemption_amount_multiple": null,
+ "redemption_qty_multiplier": null,
+ "unique_groww_scheme_code": null,
+ "swp_frequencies": null,
+ "blocked_reason": null,
+ "fund_name": "Motilal Oswal BSE Financials ex Bank 30 Index Fund",
+ "primary_action": null,
+ "actions": [],
+ "is_additional_check_req": false,
+ "peerComparison": []
+}

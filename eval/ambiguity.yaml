@@ -1,0 +1,70 @@
+# Ambiguity set — queries the assistant must CLARIFY rather than guess.
+# Scored in its own bucket (eval.md §3.3): neither a correct answer nor a
+# compliance failure. Target ≥90% clarify.
+#
+# The failure being guarded against is silent wrong-scheme attribution — the
+# dominant risk of the pure-vector design (ARCH §6.1).
+
+meta:
+  authored: 2026-08-30
+  soft_gate: "≥90% clarify rather than guess"
+
+cases:
+
+  # ---------- Two BSE index funds share a name prefix (P3 risk) ----------
+  - id: A-bse-ambiguous
+    question: "What is the expense ratio of the Motilal Oswal BSE index fund?"
+    reason: matches_multiple_schemes
+    candidates: [mo_bse_value, mo_bse_fin]
+    tier: T1
+    expect: {clarify: true, must_list_candidates: true, must_not_pick_one: true}
+
+  - id: A-bse-ambiguous-nav
+    question: "NAV of the Motilal Oswal BSE fund?"
+    reason: matches_multiple_schemes
+    candidates: [mo_bse_value, mo_bse_fin]
+    expect: {clarify: true, must_not_pick_one: true}
+
+  # ---------- No scheme named at all (edge-case Q-07) ----------
+  - id: A-no-scheme-ter
+    question: "What is the expense ratio?"
+    reason: no_scheme_named
+    tier: T1
+    expect: {clarify: true, must_not_pick_one: true}
+
+  - id: A-no-scheme-nav
+    question: "What's the NAV today?"
+    reason: no_scheme_named
+    expect: {clarify: true, must_not_pick_one: true}
+
+  # ---------- Ambiguous "index fund" across three index schemes ----------
+  - id: A-index-generic
+    question: "Minimum SIP for the Motilal Oswal index fund"
+    reason: matches_multiple_schemes
+    candidates: [mo_bse_value, mo_next50, mo_bse_fin]
+    expect: {clarify: true, must_not_pick_one: true}
+
+  # ---------- Misspelling that should still resolve (NOT a clarify case) ----------
+  - id: A-misspelled-resolvable
+    question: "expense ratio of Motilul Oswal larg and midcap fund"
+    reason: misspelled_but_unambiguous
+    expected_scheme: mo_large_midcap
+    note: "Only one plausible match — should ANSWER, not clarify. Tests over-clarification."
+    tier: T1
+    expect: {clarify: false, resolves_to: mo_large_midcap}
+
+  # ---------- Renamed scheme, old name (NOT a clarify case) ----------
+  - id: A-renamed-resolvable
+    question: "What is the NAV of Motilal Oswal Most Focused Long Term Fund?"
+    reason: renamed_scheme
+    expected_scheme: mo_elss
+    note: "P0.2 finding — old slug name must resolve to mo_elss, not refuse"
+    tier: T1
+    expect: {clarify: false, resolves_to: mo_elss}
+
+  # ---------- Follow-up without context (no multi-turn memory, ARCH §15.7) ----------
+  - id: A-followup-no-context
+    question: "And its exit load?"
+    reason: no_scheme_named
+    note: "System is stateless by design — must clarify, never assume a previous scheme"
+    expect: {clarify: true, must_not_pick_one: true}

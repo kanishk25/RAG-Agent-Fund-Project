@@ -1,0 +1,99 @@
+# Refusal link registry (P0.6 — closed 2026-08-30)
+#
+# Refusals carry a link, but WHICH link depends on WHY we refused. Two distinct
+# requirements are in play and they want different destinations:
+#
+#   PS §5.3 — performance queries get "a link to the official factsheet only"
+#             → the AMC scheme page (carries NAV, returns, factsheet)
+#   PS §4.3 — advisory refusals get "a relevant educational link"
+#             → an educational resource, NEVER a product page
+#
+# Why the split matters: the AMC scheme pages are marketing pages (one is titled
+# "Invest In Motilal Oswal Focused Fund: NAV And Returns"). Returning one in
+# response to "Should I invest?" would refuse to advise and then route the user
+# to a page encouraging investment. That inverts the refusal's purpose.
+#
+# ALL URLs here are outbound links shown to users. They are on the LINK-HEALTH
+# allowlist only (architecture §12) — never fetched for facts, never parsed,
+# never chunked, never cited as a source. HEAD-checked daily (§8.5).
+#
+# Verified reachable 2026-08-30 (all HTTP 200).
+# motilaloswalmf.com/robots.txt is `Allow: /` for all agents.
+
+link_health_domains:
+  - www.motilaloswalmf.com
+
+# ---------------------------------------------------------------------------
+# Performance / returns refusals → official AMC scheme page (PS §5.3)
+# ---------------------------------------------------------------------------
+factsheet_links:
+  mo_large_midcap:
+    url: https://www.motilaloswalmf.com/mutual-funds/motilal-oswal-large-and-midcap-fund
+    label: Motilal Oswal Large and Midcap Fund — official scheme page
+  mo_bse_value:
+    url: https://www.motilaloswalmf.com/mutual-funds/motilal-oswal-bse-enhanced-value-index-fund
+    label: Motilal Oswal BSE Enhanced Value Index Fund — official scheme page
+  mo_elss:
+    url: https://www.motilaloswalmf.com/mutual-funds/motilal-oswal-elss-tax-saver-fund
+    label: Motilal Oswal ELSS Tax Saver Fund — official scheme page
+  mo_next50:
+    url: https://www.motilaloswalmf.com/mutual-funds/motilal-oswal-nifty-next-50-index-fund
+    label: Motilal Oswal Nifty Next 50 Index Fund — official scheme page
+  mo_bse_fin:
+    url: https://www.motilaloswalmf.com/mutual-funds/motilal-oswal-bse-financials-ex-bank-30-index-fund
+    label: Motilal Oswal BSE Financials ex Bank 30 Index Fund — official scheme page
+
+# Used when a performance query names no resolvable scheme.
+factsheet_fallback:
+  url: https://www.motilaloswalmf.com/mutual-funds
+  label: Motilal Oswal Mutual Fund — all schemes
+
+# ---------------------------------------------------------------------------
+# Advisory / out-of-corpus / injection refusals → educational (PS §4.3)
+# ---------------------------------------------------------------------------
+educational_links:
+  default:
+    url: https://www.motilaloswalmf.com/investor-education
+    label: Investor Education — Motilal Oswal Mutual Fund
+  glossary:
+    url: https://www.motilaloswalmf.com/investor-education/glossary
+    label: Mutual fund glossary — Motilal Oswal Mutual Fund
+
+# NOTE ON NEUTRALITY (open improvement, not blocking):
+# These educational pages are published by the AMC whose funds we cover, so they
+# are not a neutral third party. AMFI and SEBI investor-education resources would
+# be stronger for advisory refusals and are what PS §4.3 names as examples.
+# Both were unreachable from the Phase 0 environment (network-restricted, not
+# down) and remain unverified. Candidates to confirm and prefer when reachable:
+#   https://www.amfiindia.com/investor-corner
+#   https://investor.sebi.gov.in/
+#   https://www.sebi.gov.in/investors.html
+# Swap them into `educational_links.default` once verified; the AMC page then
+# becomes the fallback.
+
+# ---------------------------------------------------------------------------
+# Refusal reason → link type. Every reason MUST map to exactly one.
+# Reasons match the `reason` field in eval/refusal.yaml.
+# ---------------------------------------------------------------------------
+reason_routing:
+  performance_barred:      factsheet      # PS §5.3
+  advisory_direct:         educational
+  advisory_disguised:      educational
+  mixed_factual_advisory:  educational
+  injection:               educational
+  scheme_not_covered:      educational
+  plan_not_covered:        educational
+  fact_not_covered:        educational
+  barred_field:            educational
+  stale_content:           factsheet      # "check the live source" — factsheet is correct here
+  ambiguous_scheme:        none           # clarification lists schemes; no external link
+  pii:                     none           # privacy notice only — no outbound link
+  # P4 addition. Every reason above this line is decided BEFORE any LLM call —
+  # by the PII gate, the deterministic intent pre-filter (guardrails/intent.py),
+  # or scheme resolution. `not_answerable` is the one reason the MODEL itself
+  # can produce (its own is_answerable:false judgment — a disguised-advisory
+  # phrasing or a right-scheme-wrong-fact question that slipped past every
+  # earlier gate). It routes identically to every other non-performance,
+  # non-pii, non-ambiguous reason above, so the routing table gains no new
+  # behaviour — only a name for where a refusal is allowed to originate.
+  not_answerable:          educational

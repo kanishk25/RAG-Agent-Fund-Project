@@ -1,0 +1,271 @@
+# Golden set — queries the assistant MUST answer correctly.
+# Authored in Phase 0 (2026-08-30), BEFORE the system prompt exists, so these
+# specify correct behaviour independently of whatever the prompt produces.
+#
+# expect.kind:
+#   volatile — value changes; assert against the registry value at the pinned
+#              index SHA, never against a literal (eval.md §2.2)
+#   stable   — assert the literal value
+#
+# Schemes: mo_large_midcap, mo_bse_value, mo_elss, mo_next50, mo_bse_fin
+# Values verified 2026-08-30 (nav_date 28-Aug-2026).
+
+meta:
+  authored: 2026-08-30
+  source_fixture: tests/fixtures/groww/
+  scheme_urls:
+    mo_large_midcap: https://groww.in/mutual-funds/motilal-oswal-large-and-midcap-fund-direct-growth
+    mo_bse_value:    https://groww.in/mutual-funds/motilal-oswal-bse-enhanced-value-index-fund-direct-growth
+    mo_elss:         https://groww.in/mutual-funds/motilal-oswal-most-focused-long-term-fund-direct-growth
+    mo_next50:       https://groww.in/mutual-funds/motilal-oswal-nifty-next-50-index-fund-direct-growth
+    mo_bse_fin:      https://groww.in/mutual-funds/motilal-oswal-bse-financials-ex-bank-30-index-fund-direct-growth
+
+cases:
+
+  # ---------- NAV (volatile; must state the declaration date, PS §8.7) ----------
+  - id: G-nav-large_midcap
+    question: "What is the NAV of Motilal Oswal Large and Midcap Fund Direct Growth?"
+    scheme_id: mo_large_midcap
+    doc_type: nav
+    tier: T1
+    expect: {kind: volatile, must_state_date: true}
+
+  - id: G-nav-elss
+    question: "What is the current NAV of Motilal Oswal ELSS Tax Saver Fund?"
+    scheme_id: mo_elss
+    doc_type: nav
+    expect: {kind: volatile, must_state_date: true}
+
+  - id: G-nav-next50
+    question: "NAV of Motilal Oswal Nifty Next 50 Index Fund direct growth"
+    scheme_id: mo_next50
+    doc_type: nav
+    expect: {kind: volatile, must_state_date: true}
+
+  - id: G-nav-bse_fin
+    question: "What is the net asset value of Motilal Oswal BSE Financials ex Bank 30 Index Fund?"
+    scheme_id: mo_bse_fin
+    doc_type: nav
+    expect: {kind: volatile, must_state_date: true}
+
+  - id: G-nav-bse_value
+    question: "Tell me the NAV for Motilal Oswal BSE Enhanced Value Index Fund Direct Growth."
+    scheme_id: mo_bse_value
+    doc_type: nav
+    expect: {kind: volatile, must_state_date: true}
+
+  # ---------- Expense ratio (volatile) ----------
+  - id: G-ter-large_midcap
+    question: "What is the expense ratio of Motilal Oswal Large and Midcap Fund Direct Growth?"
+    scheme_id: mo_large_midcap
+    doc_type: expense_ratio
+    tier: T1
+    expect: {kind: volatile, reference_value: "0.92"}
+
+  - id: G-ter-elss
+    question: "Expense ratio of Motilal Oswal ELSS Tax Saver Fund direct plan?"
+    scheme_id: mo_elss
+    doc_type: expense_ratio
+    expect: {kind: volatile, reference_value: "0.97"}
+
+  - id: G-ter-next50
+    question: "How much is the TER for Motilal Oswal Nifty Next 50 Index Fund?"
+    scheme_id: mo_next50
+    doc_type: expense_ratio
+    expect: {kind: volatile, reference_value: "0.41"}
+
+  - id: G-ter-bse_value
+    question: "What is the expense ratio of Motilal Oswal BSE Enhanced Value Index Fund?"
+    scheme_id: mo_bse_value
+    doc_type: expense_ratio
+    expect: {kind: volatile, reference_value: "0.52"}
+
+  - id: G-ter-bse_fin
+    question: "Expense ratio for Motilal Oswal BSE Financials ex Bank 30 Index Fund direct growth"
+    scheme_id: mo_bse_fin
+    doc_type: expense_ratio
+    expect: {kind: volatile, reference_value: "0.52"}
+
+  # ---------- Exit load (stable; publisher-dated) ----------
+  - id: G-exit-large_midcap
+    question: "What is the exit load on Motilal Oswal Large and Midcap Fund?"
+    scheme_id: mo_large_midcap
+    doc_type: exit_load
+    tier: T1
+    expect:
+      kind: stable
+      value: "Exit load of 1%, if redeemed within 365 days."
+      accept_equivalent: ["1% if redeemed within 365 days", "1% within 1 year"]
+
+  - id: G-exit-elss
+    question: "Does Motilal Oswal ELSS Tax Saver Fund have an exit load?"
+    scheme_id: mo_elss
+    doc_type: exit_load
+    expect: {kind: stable, value: "Nil", accept_equivalent: ["No exit load", "None"]}
+
+  - id: G-exit-next50
+    question: "Exit load for Motilal Oswal Nifty Next 50 Index Fund?"
+    scheme_id: mo_next50
+    doc_type: exit_load
+    expect:
+      kind: stable
+      value: "Exit load of 1%, if redeemed within 15 days."
+      accept_equivalent: ["1% if redeemed within 15 days"]
+
+  - id: G-exit-bse_value
+    question: "What exit load applies to Motilal Oswal BSE Enhanced Value Index Fund?"
+    scheme_id: mo_bse_value
+    doc_type: exit_load
+    expect:
+      kind: stable
+      value: "Exit Load: 1%- If redeemed on or before 15 days from the date of allotment."
+      accept_equivalent: ["1% if redeemed on or before 15 days"]
+
+  - id: G-exit-bse_fin
+    question: "Is there an exit load on Motilal Oswal BSE Financials ex Bank 30 Index Fund?"
+    scheme_id: mo_bse_fin
+    doc_type: exit_load
+    expect:
+      kind: stable
+      value: "Exit load-1%- If redeemed within 15 days from the date of allotment."
+      accept_equivalent: ["1% if redeemed within 15 days"]
+
+  # ---------- Minimum SIP (stable value; page-level date, gate-exempt) ----------
+  - id: G-sip-large_midcap
+    question: "What is the minimum SIP amount for Motilal Oswal Large and Midcap Fund?"
+    scheme_id: mo_large_midcap
+    doc_type: min_sip
+    tier: T1
+    expect: {kind: stable, value: "500", accept_equivalent: ["Rs 500", "₹500", "Rs. 500"]}
+
+  - id: G-sip-elss
+    question: "Minimum SIP for Motilal Oswal ELSS Tax Saver Fund?"
+    scheme_id: mo_elss
+    doc_type: min_sip
+    expect: {kind: stable, value: "500", accept_equivalent: ["Rs 500", "₹500"]}
+
+  - id: G-sip-next50
+    question: "What's the smallest SIP I can start in Motilal Oswal Nifty Next 50 Index Fund?"
+    scheme_id: mo_next50
+    doc_type: min_sip
+    expect: {kind: stable, value: "500", accept_equivalent: ["Rs 500", "₹500"]}
+
+  - id: G-sip-bse_fin
+    question: "Minimum SIP amount for Motilal Oswal BSE Financials ex Bank 30 Index Fund"
+    scheme_id: mo_bse_fin
+    doc_type: min_sip
+    expect: {kind: stable, value: "500", accept_equivalent: ["Rs 500", "₹500"]}
+
+  # ---------- Lock-in (ELSS only; others correctly report none) ----------
+  - id: G-lockin-elss
+    question: "What is the lock-in period for Motilal Oswal ELSS Tax Saver Fund?"
+    scheme_id: mo_elss
+    doc_type: lock_in
+    tier: T1
+    expect:
+      kind: stable
+      value: "3 years"
+      accept_equivalent: ["36 months", "three years"]   # tests normalisation, eval.md §5.3
+
+  - id: G-lockin-elss-oldname
+    question: "Lock-in period of Motilal Oswal Most Focused Long Term Fund?"
+    scheme_id: mo_elss
+    doc_type: lock_in
+    note: "Renamed scheme — old slug name must resolve (P0.2 finding)"
+    tier: T1
+    expect: {kind: stable, value: "3 years", accept_equivalent: ["36 months"]}
+
+  - id: G-lockin-next50-none
+    question: "Is there a lock-in period on Motilal Oswal Nifty Next 50 Index Fund?"
+    scheme_id: mo_next50
+    doc_type: lock_in
+    note: "lock_in is null — must state there is none, NOT refuse and NOT invent one"
+    expect: {kind: stable, value: "no lock-in", accept_equivalent: ["none", "not applicable", "no lock in period"]}
+
+  # ---------- Benchmark (stable value; page-level date, gate-exempt) ----------
+  - id: G-bench-large_midcap
+    question: "What is the benchmark index of Motilal Oswal Large and Midcap Fund?"
+    scheme_id: mo_large_midcap
+    doc_type: benchmark
+    tier: T1
+    expect: {kind: stable, value: "NIFTY Large Midcap 250 TRI"}
+
+  - id: G-bench-elss
+    question: "Which index does Motilal Oswal ELSS Tax Saver Fund track as its benchmark?"
+    scheme_id: mo_elss
+    doc_type: benchmark
+    expect: {kind: stable, value: "NIFTY 500 TRI"}
+
+  - id: G-bench-next50
+    question: "Benchmark for Motilal Oswal Nifty Next 50 Index Fund"
+    scheme_id: mo_next50
+    doc_type: benchmark
+    expect: {kind: stable, value: "NIFTY Next 50 TRI"}
+
+  - id: G-bench-bse_value
+    question: "What benchmark does Motilal Oswal BSE Enhanced Value Index Fund use?"
+    scheme_id: mo_bse_value
+    doc_type: benchmark
+    expect: {kind: stable, value: "BSE Enhanced Value TRI"}
+
+  - id: G-bench-bse_fin
+    question: "Benchmark index of Motilal Oswal BSE Financials ex Bank 30 Index Fund?"
+    scheme_id: mo_bse_fin
+    doc_type: benchmark
+    expect: {kind: stable, value: "BSE Financials ex Bank 30 TRI"}
+
+  # ---------- Holdings (verbatim only, PS §8.2; one chunk per scheme) ----------
+  - id: G-hold-large_midcap
+    question: "What are the top holdings of Motilal Oswal Large and Midcap Fund?"
+    scheme_id: mo_large_midcap
+    doc_type: holdings
+    tier: T1
+    expect:
+      kind: volatile
+      must_state_date: true
+      must_not_contain: ["recommend", "attractive", "well positioned", "outperform"]
+
+  - id: G-hold-elss
+    question: "Which companies does Motilal Oswal ELSS Tax Saver Fund hold?"
+    scheme_id: mo_elss
+    doc_type: holdings
+    expect: {kind: volatile, must_state_date: true}
+
+  - id: G-hold-next50
+    question: "Portfolio holdings of Motilal Oswal Nifty Next 50 Index Fund"
+    scheme_id: mo_next50
+    doc_type: holdings
+    expect: {kind: volatile, must_state_date: true}
+
+  # ---------- Objective multi-scheme (ALLOWED per PS §8.4) ----------
+  - id: G-multi-elss-identify
+    question: "Which of the Motilal Oswal funds you cover is an ELSS fund?"
+    scheme_id: mo_elss
+    doc_type: lock_in
+    note: "Objective attribute across schemes — allowed, not a ranking (PS §8.4)"
+    tier: T1
+    expect: {kind: stable, value: "ELSS Tax Saver"}
+
+  # ---------- Phrasing robustness (same fact, varied wording) ----------
+  - id: G-phrasing-ter-casual
+    question: "how much does motilal oswal large and midcap charge in fees"
+    scheme_id: mo_large_midcap
+    doc_type: expense_ratio
+    expect: {kind: volatile, reference_value: "0.92"}
+
+  - id: G-phrasing-sip-question
+    question: "Can I start a SIP in the Motilal Oswal ELSS fund with 500 rupees?"
+    scheme_id: mo_elss
+    doc_type: min_sip
+    note: "Factual min-SIP question phrased as a yes/no — must answer the fact, not advise"
+    expect: {kind: stable, value: "500", accept_equivalent: ["Rs 500", "₹500"]}
+
+  - id: G-phrasing-exit-timing
+    question: "If I redeem Motilal Oswal Nifty Next 50 Index Fund after 20 days, is there an exit load?"
+    scheme_id: mo_next50
+    doc_type: exit_load
+    note: "Borderline — factual lookup of the exit-load rule, NOT advice. Must state the rule."
+    expect:
+      kind: stable
+      value: "Exit load of 1%, if redeemed within 15 days."
+      must_not_contain: ["you should", "I recommend", "better to"]
