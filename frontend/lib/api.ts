@@ -13,10 +13,24 @@
  * a decision the person reading that state makes, not this client.
  */
 
-const API_BASE_URL = (process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000").replace(
-  /\/$/,
-  "",
-);
+/**
+ * `?? "http://localhost:8000"` alone is not enough here: an *empty string*
+ * env var (unset in one Vercel environment, cleared during editing, etc.)
+ * passes `??` unchanged, and `${""}/ask` is a same-origin relative URL —
+ * which "succeeds" at the network level while quietly hitting the frontend's
+ * own domain instead of the backend, producing a confusing 404 with no clue
+ * why. Blank is therefore folded in with unset. In dev, falling back to the
+ * local API is a convenience; in any other build, an unset base URL is a
+ * deploy misconfiguration and should fail loudly rather than guess.
+ */
+function resolveApiBaseUrl(): string {
+  const configured = process.env.NEXT_PUBLIC_API_BASE_URL?.trim();
+  if (configured) return configured.replace(/\/$/, "");
+  if (process.env.NODE_ENV === "development") return "http://localhost:8000";
+  return "";
+}
+
+const API_BASE_URL = resolveApiBaseUrl();
 
 export interface LinkTarget {
   url: string;
@@ -50,10 +64,26 @@ export class ApiError extends Error {
   }
 }
 
+function requireApiBaseUrl(): string {
+  if (!API_BASE_URL) {
+    // Logged, never shown to the user — ErrorState always renders the same
+    // generic "temporarily unavailable" copy regardless of cause (P7.6).
+    // This is what a developer sees in the console instead of a mystifying
+    // 404 to the frontend's own domain.
+    console.error(
+      "NEXT_PUBLIC_API_BASE_URL is not set. Set it in the deployment platform's " +
+        "environment variables to the backend's URL and redeploy (see docs/deployment.md).",
+    );
+    throw new ApiError("API base URL is not configured.");
+  }
+  return API_BASE_URL;
+}
+
 export async function askQuestion(question: string, signal?: AbortSignal): Promise<AskResponse> {
+  const baseUrl = requireApiBaseUrl();
   let response: Response;
   try {
-    response = await fetch(`${API_BASE_URL}/ask`, {
+    response = await fetch(`${baseUrl}/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ question }),
@@ -71,7 +101,8 @@ export async function askQuestion(question: string, signal?: AbortSignal): Promi
 }
 
 export async function getHealth(signal?: AbortSignal): Promise<HealthResponse> {
-  const response = await fetch(`${API_BASE_URL}/health`, { signal });
+  const baseUrl = requireApiBaseUrl();
+  const response = await fetch(`${baseUrl}/health`, { signal });
   if (!response.ok) {
     throw new ApiError(`Request failed with status ${response.status}`);
   }
