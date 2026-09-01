@@ -55,3 +55,12 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 filterwarnings = ["ignore::DeprecationWarning"]
+# Without this, a bare `pytest` invocation (as opposed to `python -m pytest`,
+# which prepends the cwd to sys.path itself) cannot import `tests.conftest`
+# from test_cli.py/test_indexer.py/test_pipeline.py — `tests/` has no
+# `__init__.py`, so pytest's default "prepend" import mode only puts `tests/`
+# itself on sys.path, not the repo root the absolute `from tests.conftest
+# import ...` needs. CI's `pytest tests/ -q` (ci.yml) hit exactly this and
+# failed to even collect, on every run since this repo's first commit —
+# undetected locally because every local run here used `python -m pytest`.
+pythonpath = ["."]
