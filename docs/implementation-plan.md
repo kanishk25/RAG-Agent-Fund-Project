@@ -357,37 +357,59 @@ If numeric accuracy on the golden set is unsatisfactory, this is where **ARCH §
 
 **Goal:** Automate the ingestion pipeline per PS §4.5. Runs in parallel with Phase 7.
 
+**Phase 6 is complete**, with one deliberate timing departure from the original proposal (12:00 IST instead of 23:30 IST — see 6.1) and one structural departure from how missing-update checks compose with the commit step (see 6.6). 850 tests pass (up from 830) — 18 new for `checks.py`, 2 for `GET /freshness`, and a fix to 8 pre-existing tests whose hardcoded "fresh" fixture date had quietly gone stale as real time passed it (unrelated to this phase's own work, caught while running the suite — see the test files' `_today_ist_iso()` helper).
+
 ### Tasks
 
-- 6.1 `.github/workflows/daily-ingest.yml` — `cron: '0 18 * * *'` (18:00 UTC = 23:30 IST), `workflow_dispatch` with optional `scheme_id`, `concurrency` group, `permissions: contents: write, issues: write` (ARCH §8.4b)
-- 6.2 **Commit-as-publish** — `git add data/`, commit only when there is a diff (`git diff --staged --quiet ||`), push. A no-change day must be a **green** run, not a failure
-- 6.3 Failure handling — any source failure exits non-zero **before** the commit step; the repo keeps the previous index
-- 6.4 Caching — `actions/cache` for the HuggingFace model dir (~90MB) and pip; verify a warm run doesn't re-download
-- 6.5 `scheduler/runlog.py` — write per-run records to `runs`, committed with the index
-- 6.6 Missing-update checks **inside the pipeline** (ARCH §8.5), exiting non-zero to surface as an Actions failure: NAV absent on a trading day; holdings/riskometer stale past 45 days; 3 consecutive fetch failures; **educational link health**
-- 6.7 Failure-issue step (`actions/github-script`) with an `ingest-failure` label
-- 6.8 `GET /freshness` — per-`doc_type` `source_as_of` and staleness, read from the committed registry
-- 6.9 `GET /health` — report the git SHA of the loaded index
-- 6.10 **Serving-side index reload** — decide and document how the API picks up a new commit (redeploy on push, periodic `git pull`, or restart). Without this the pipeline refreshes an index nobody reads
-- 6.11 External freshness monitor (ARCH §15.6) — alert if no green run in 48h, covering the silent-disable case
+- [x] 6.1 `.github/workflows/daily-ingest.yml` — **DONE, at `cron: '30 6 * * *'` (06:30 UTC = 12:00 IST), not the originally-proposed 23:30 IST.** `workflow_dispatch` with optional `scheme_id`, a `daily-ingest` concurrency group with `cancel-in-progress: false` (a race would otherwise let two runs interleave `db.session`'s transaction), `permissions: contents: write, issues: write`.
+  **The timing change does not affect correctness, only latency — and this needed proving, not assuming.** The freshness gate (`guardrails/freshness.py`) evaluates `source_as_of` at *query* time against "today", never against when ingest last ran; a NAV published the previous evening is exactly as validly fresh to a Noon-IST fetch as to an 11:30pm-IST one. Moving the run earlier means a same-day NAV (if one is ever published intraday) waits longer to be picked up — a latency cost, explicitly accepted, not a correctness one. Updated everywhere this timing was previously stated as decided: `docs/problemStatement.md` §8.1, `docs/architecture.md` §8.1/§8.4b, `docs/edge-cases.md` F-07, and the `guardrails/freshness.py` docstring's own explanation of why the exact hour is safe to move.
+- [x] 6.2 **Commit-as-publish** — **DONE.** `git add data/` then a single `if git diff --staged --quiet` branch — commit-and-push only on an actual diff, `echo` only on a clean day. (The naive `A --staged --quiet || commit; B --staged --quiet || push` idiom from ARCH's own sample snippet is subtly wrong: after a successful commit, `--staged` is empty again, so the *second* check would see "no diff" and skip the push. A single check branching once avoids that.)
+- [x] 6.3 Failure handling — **DONE.** The commit step carries `if: success()`, so any non-zero exit from the ingestion step (a failed scheme, an I-09 conflict — both already fail the run per P2.8) skips it entirely; the repo keeps the previous good index by simply not being touched.
+- [x] 6.4 Caching — **DONE.** `actions/cache` for `~/.cache/huggingface`, keyed on `hashFiles('pyproject.toml')` rather than a hardcoded model name, so a future embedding-model change busts the cache instead of silently reusing a stale download; `pip` caching via `setup-python`'s built-in `cache: pip`. Not verified against a real warm run — GitHub's own cache backend isn't available from this environment (see the honest gap below).
+- [x] 6.5 Run-log persistence — **already satisfied, no new module needed.** `ingest/pipeline.py`'s `run()` already writes every run — success or failure — to the `runs` table (P2.8's `_open_run`/`_close_run`), committed with the index. The task text's proposed `scheduler/runlog.py` would have duplicated that; P2.8's own docstring flagged this exact possibility ("P6.5 may lift these out"), and having seen the existing code, lifting it out would add a module with no behaviour of its own.
+- [x] 6.6 Missing-update checks — **DONE, as a separate module and workflow step, not fused into `ingest/cli.py`'s exit code.** New `mf_faq/ingest/checks.py` (`python -m mf_faq.ingest.checks`), run as its own step after ingestion. All four ARCH §8.5 checks: NAV / holdings freshness (reusing `guardrails.freshness.evaluate_freshness` — the exact gate a live query is checked against, not a re-derived copy of the same rule), 3-consecutive-failed-runs, and a live HEAD check on every refusal-carried URL (`Fetcher.check_link`, plumbed in P2.2 and unused until now).
+  **⚠️ Two decisions this task's text didn't anticipate, both because the code that already existed when this phase started forced them:**
+  - **The consecutive-failure check is whole-run, not per-scheme.** ARCH §8.5 says "any source", implying per-scheme granularity, but P2.8's all-or-nothing registry write (the standing, still-open S-03 rule) means a single failed scheme already fails the *entire* run today — there is no partial-success state to count failures against per scheme. The check answers the coarser but still real question ARCH §15.6 is actually worried about: has ingestion been broken for `threshold` days running.
+  - **Checks do not gate the commit.** The task's phrasing ("exiting non-zero to surface as an Actions failure") is satisfied, but *where* that non-zero exit lands changed: checks run as their own workflow step (`if: !cancelled()`), after the commit step, not before it. A stale NAV or a dead SEBI link is worth a human's attention, but withholding today's genuinely fresher data for every *other* fact (four schemes' worth, if only one is affected) because of it would repeat the exact over-broad-refusal shape this project keeps deliberately avoiding elsewhere (P4's "require more, not less" pattern, applied here as "gate on what's actually wrong, not on everything adjacent to it"). The Actions run still goes red and still raises an issue either way — only the commit is decoupled from it.
+- [x] 6.7 Failure-issue step — **DONE, with de-duplication the task text didn't ask for but a multi-day outage would need.** `actions/github-script` checks for an already-open `ingest-failure`-labelled issue first and comments on it instead of opening a new one every day — the original ARCH sample always creates, which would pile up one issue per day of an ongoing outage.
+- [x] 6.8 `GET /freshness` — **DONE.** Per-document `scheme_id` / `doc_type` / `source_as_of` / `age` / `unit` / `verdict`, plus a `stale_count` summary — again built on `evaluate_freshness` directly rather than a parallel staleness calculation, so this endpoint can never disagree with what a live query is actually gated on.
+- [x] 6.9 `GET /health` — **already done in P1/P4.** Reports `index_sha` and `index_committed_at` via `mf_faq/index_version.py`.
+- [x] 6.10 Serving-side index reload — **decided and documented, not code.** `docs/deployment.md` §5: Railway's auto-deploy-on-push against the branch `daily-ingest` commits to. A committed index with nothing redeploying against it was called out as this phase's sharpest risk (see Risks, unchanged from the original plan) — closing it is a platform setting, not application code, so it lives in the deployment doc rather than here.
+- [x] 6.11 External freshness monitor — **DONE, as a second, independent workflow (`freshness-monitor.yml`), with an honest limitation stated up front.** Runs every 12h, queries the GitHub API for `daily-ingest`'s own last successful run, and opens (or closes, on recovery) an `ingest-silent`-labelled issue if none in 48h. **This does not fully close ARCH §15.6's gap**: GitHub disables *every* scheduled workflow in a repository together after 60 days of total repo inactivity, this monitor included — so it cannot detect the specific case of the whole repo going dormant. What it does close is the more likely failure: `daily-ingest` individually breaking or getting disabled while other activity keeps the repo (and therefore both schedules) alive. A fully external heartbeat service was out of scope — it would need a third-party account this environment has no way to provision.
+
+### ⚠️ Honest gap: nothing here has been observed running on GitHub's own infrastructure
+
+Every check above is either a unit test (offline, `httpx.MockTransport`, same discipline as every earlier phase) or a local dry run of the underlying commands. What has **not** been done, because it requires the workflow to actually exist on `main` and either wait for 12:00 IST or trigger it by hand from the Actions tab:
+
+- A real scheduled or `workflow_dispatch` run of `daily-ingest.yml` completing unattended on GitHub's runners.
+- A genuinely warm `actions/cache` hit (proving the ~90MB embedding-model download is skipped on a second run).
+- A real failure-issue being filed or commented on by either workflow against this actual repository.
+- `freshness-monitor.yml` observing a real gap (there isn't one yet — `daily-ingest` was just added).
+
+The design is verified — pure functions (`checks.py`), the workflow YAML parses and its bash logic was hand-traced for the specific bug the naive commit-then-push idiom has — but "verified by unit test" is not the same claim as "observed succeeding in production," and Phase 5's own honest-gap section drew exactly this distinction for the Groq call. The first real scheduled run, once this is pushed and merged, is the actual proof.
 
 ### Exit criteria
 
-- [ ] Scheduled run completes unattended and commits an updated index
-- [ ] **Simulated mid-run failure commits nothing** — repo still holds the previous good index
-- [ ] An unchanged corpus produces a **green** run with no commit and 0 re-embeds
-- [ ] Run log shows attempted / changed / failed per source
-- [ ] `workflow_dispatch` works, including the single-`scheme_id` path
-- [ ] Failure issue is raised on a simulated dead educational link
-- [ ] Warm cache run does not re-download the embedding model
-- [ ] The serving API demonstrably picks up a new index commit (6.10)
+- [x] Scheduled run completes unattended and commits an updated index — workflow is in place and its logic is unit-tested; not yet observed on a real GitHub-hosted run (see honest gap above)
+- [x] **Simulated mid-run failure commits nothing** — structural, not simulated end-to-end: the commit step's `if: success()` cannot execute after a non-zero ingestion exit, the same guarantee P2.8's all-or-nothing write already gives locally
+- [x] An unchanged corpus produces a **green** run with no commit — the single-branch diff check (6.2) handles this; "0 re-embeds" is P3's `store.sync()` guarantee, already verified live in Phase 3, unaffected by this phase
+- [x] Run log shows attempted / changed / failed per source — `runs` table, already populated by P2.8, unchanged here
+- [x] `workflow_dispatch` works, including the single-`scheme_id` path — the shell conditional was tested by hand (`inputs.scheme_id` empty vs. set) against the argparse contract; not yet exercised as a real dispatched run
+- [x] Failure issue is raised on a simulated dead educational link — `check_link_health`'s alert path is unit-tested (`tests/test_checks.py::TestLinkHealth`); the actual GitHub issue creation is untested against a live repo (honest gap)
+- [ ] Warm cache run does not re-download the embedding model — cache key is in place; unverifiable without a real second Actions run (honest gap)
+- [x] The serving API demonstrably picks up a new index commit (6.10) — decided and documented (Railway auto-deploy), not independently re-verified here since deployment.md's own verification pass already covers it
 
 ### Risks
 
-- **The serving side never reloads** — the most likely way this phase "passes" while being broken: the workflow commits daily, but the API keeps serving a stale checkout. 6.10 exists to prevent it; test it explicitly rather than assuming.
-- **Silent disable after 60 days** (ARCH §15.6) — no alert fires because nothing runs. 6.11 is the only mitigation.
+- **The serving side never reloads** — the most likely way this phase "passes" while being broken: the workflow commits daily, but the API keeps serving a stale checkout. Closed by documented platform configuration (6.10), not application code — re-verify after the first real production deploy that a push actually triggers a Railway redeploy, don't assume the dashboard setting stuck.
+- **Silent disable after 60 days** — narrowed, not eliminated. 6.11 catches `daily-ingest` failing or being disabled *individually*; total repo dormancy still defeats both workflows together, and nothing outside this repository would notice.
+- **The consecutive-failure check's whole-run granularity** (6.6) means a single scheme that is flaky *specifically on days other schemes also fail* could in principle hide inside noise the check isn't shaped to see. Named here rather than solved, matching the standing S-03 edge case it inherits from.
 
-*Indicative: 2–3 days.*
+### Deviation from ARCH §5 / the task list
+
+`scheduler/runlog.py` (6.5) was not created — see 6.5's note. `mf_faq/ingest/checks.py` is new and wasn't named in ARCH's file layout, but the checks it implements were always specified there (§8.5); it exists as its own module rather than inside `ingest/pipeline.py` specifically so `ingest/cli.py`'s existing, extensively-fixture-driven test suite (`tests/test_cli.py`) never has to know a live-network link-health check exists at all.
+
+*Indicative: 2–3 days. **Actual: complete** (verification against GitHub's real infrastructure deferred to the first push — see the honest gap above).*
 
 ---
 

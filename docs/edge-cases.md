@@ -110,7 +110,7 @@ The gate runs **before logging, retrieval, and any LLM call** (ARCH §7.1). Ever
 | F-04 | `source_as_of` is in the future | Parser bug — reject the document, alert. Never serve | Defined |
 | **F-05** | **Retrieved chunks carry different `source_as_of` values** | The footer takes the **cited** chunk's date. But if the answer draws on two chunks with different dates, only one citation is allowed (PS §4.2) — so which fact is being dated? | **⚠ DECIDE** |
 | F-06 | `source_as_of` in an unparseable format after a site change | Reject the fact; alert. Do not default to today | Defined (ARCH §11) |
-| F-07 | Timezone: run commits at 18:00 UTC, dates are IST | Compare dates in IST consistently. A UTC/IST mix shifts staleness by a day at the boundary | Defined — pin the timezone once |
+| F-07 | Timezone: scheduler runs at 06:30 UTC (12:00 IST, P6.1), dates are IST | Compare dates in IST consistently. A UTC/IST mix shifts staleness by a day at the boundary | Defined — pin the timezone once |
 | F-08 | Index is 3 days stale (missed runs) | NAV refuses; other facts flag or refuse per the §8.6 policy | Defined |
 
 ---

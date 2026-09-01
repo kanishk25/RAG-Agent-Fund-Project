@@ -11,14 +11,23 @@ about the HTTP layer around it.
 
 from __future__ import annotations
 
+from datetime import datetime
+
 import pytest
 from fastapi.testclient import TestClient
 
 from mf_faq.api.main import DISCLAIMER, app, get_answer_client, get_searcher
 from mf_faq.generation.answer import FactAnswer, GenerationResult
+from mf_faq.guardrails.freshness import IST
 from mf_faq.retrieval.resolve import Resolution, SchemeMatch
 from mf_faq.retrieval.search import SearchOutcome, SearchResult
 from mf_faq.retrieval.store import RetrievedChunk
+
+
+def _today_ist_iso() -> str:
+    """Always 'today' — see test_pipeline_generation.py's copy of this helper
+    for why a hardcoded past date here silently starts failing later."""
+    return datetime.now(IST).date().isoformat()
 
 
 @pytest.fixture
@@ -42,7 +51,7 @@ def _chunk(**over) -> RetrievedChunk:
         doc_type="nav",
         text="The latest declared NAV of Motilal Oswal ELSS Tax Saver Fund is 41.70 per unit.",
         source_url="https://groww.in/mutual-funds/x",
-        source_as_of="2026-08-28",
+        source_as_of=_today_ist_iso(),
         similarity=0.9,
     )
     return RetrievedChunk(**{**defaults, **over})
@@ -114,6 +123,60 @@ def test_startup_validates_configs(client):
     """Config errors surface at boot. If validation had failed, the TestClient
     context manager would have raised before any request ran."""
     assert client.get("/health").status_code == 200
+
+
+class TestFreshnessEndpoint:
+    """P6.8 — `GET /freshness`, reading straight from the committed registry."""
+
+    def test_empty_registry_returns_no_documents(self, client):
+        body = client.get("/freshness").json()
+        assert body["documents"] == []
+        assert body["stale_count"] == 0
+        assert body["disclaimer"] == DISCLAIMER
+
+    def test_reports_a_fresh_and_a_stale_fact(self, client, tmp_path):
+        from mf_faq import db
+
+        registry_db = tmp_path / "registry.db"
+        with db.session(registry_db) as conn:
+            conn.execute(
+                "INSERT INTO documents (doc_id, scheme_id, doc_type, source_url, "
+                "content_hash, card_hash, source_as_of, fetched_at, status) "
+                "VALUES (?,?,?,?,?,?,?,?,?)",
+                (
+                    "mo_elss:nav",
+                    "mo_elss",
+                    "nav",
+                    "https://groww.in/mutual-funds/x",
+                    "h",
+                    "c",
+                    _today_ist_iso(),
+                    "2026-08-30T12:00:00+05:30",
+                    "ok",
+                ),
+            )
+            conn.execute(
+                "INSERT INTO documents (doc_id, scheme_id, doc_type, source_url, "
+                "content_hash, card_hash, source_as_of, fetched_at, status) "
+                "VALUES (?,?,?,?,?,?,?,?,?)",
+                (
+                    "mo_elss:holdings",
+                    "mo_elss",
+                    "holdings",
+                    "https://groww.in/mutual-funds/x",
+                    "h",
+                    "c",
+                    "2026-01-01",  # long past the 45-day flag threshold
+                    "2026-08-30T12:00:00+05:30",
+                    "ok",
+                ),
+            )
+
+        body = client.get("/freshness").json()
+        by_doc_type = {d["doc_type"]: d for d in body["documents"]}
+        assert by_doc_type["nav"]["verdict"] == "fresh"
+        assert by_doc_type["holdings"]["verdict"] == "flag"
+        assert body["stale_count"] == 1
 
 
 class TestAskEndpoint:

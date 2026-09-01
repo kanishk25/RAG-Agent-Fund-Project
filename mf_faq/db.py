@@ -193,3 +193,46 @@ def last_successful_run(db_path: Path) -> dict | None:
             "SELECT * FROM runs WHERE status = 'success' ORDER BY started_at DESC LIMIT 1"
         ).fetchone()
     return dict(row) if row else None
+
+
+def recent_runs(db_path: Path, limit: int) -> list[dict]:
+    """Most recent runs, any status, newest first. P6.6's consecutive-failure
+    check reads this; `last_successful_run` only ever answers a different
+    question ("when did this last work") and can't see a failure streak."""
+    if not db_path.exists():
+        return []
+    with contextlib.closing(connect(db_path)) as conn:
+        rows = conn.execute(
+            "SELECT * FROM runs ORDER BY started_at DESC LIMIT ?", (limit,)
+        ).fetchall()
+    return [dict(r) for r in rows]
+
+
+def all_documents(db_path: Path) -> list[dict]:
+    """Every registry row, for `GET /freshness` (P6.8) — the whole corpus's
+    `source_as_of` state, not one `doc_type` at a time like `documents_by_type`."""
+    if not db_path.exists():
+        return []
+    with contextlib.closing(connect(db_path)) as conn:
+        rows = conn.execute(
+            "SELECT scheme_id, doc_type, source_as_of, status "
+            "FROM documents ORDER BY scheme_id, doc_type"
+        ).fetchall()
+    return [dict(r) for r in rows]
+
+
+def documents_by_type(db_path: Path, doc_type: str) -> list[dict]:
+    """Every document row for one `doc_type`, across all schemes.
+
+    P6.6's per-`doc_type` freshness alerts (NAV, holdings) read this — they
+    need `scheme_id` + `source_as_of` for every scheme's copy of one fact, not
+    the whole registry.
+    """
+    if not db_path.exists():
+        return []
+    with contextlib.closing(connect(db_path)) as conn:
+        rows = conn.execute(
+            "SELECT scheme_id, doc_type, source_as_of, status FROM documents WHERE doc_type = ?",
+            (doc_type,),
+        ).fetchall()
+    return [dict(r) for r in rows]

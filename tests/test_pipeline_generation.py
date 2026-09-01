@@ -10,14 +10,24 @@ any particular question is answered correctly.
 
 from __future__ import annotations
 
+from datetime import datetime
+
 from mf_faq.generation.answer import FactAnswer, GenerationResult, Unavailable
 from mf_faq.generation.pipeline import ask
+from mf_faq.guardrails.freshness import IST
 from mf_faq.retrieval.resolve import Resolution, SchemeMatch
 from mf_faq.retrieval.search import SearchOutcome, SearchResult
 from mf_faq.retrieval.store import RetrievedChunk
 from mf_faq.settings import get_settings, get_sources
 
 SOURCES = get_sources()
+
+
+def _today_ist_iso() -> str:
+    """Always 'today', never a hardcoded date — a fixed past date here would
+    quietly go stale and start failing the freshness gate the moment real
+    time outran it (as `2026-08-28` eventually did)."""
+    return datetime.now(IST).date().isoformat()
 
 
 def _chunk(**over) -> RetrievedChunk:
@@ -28,7 +38,7 @@ def _chunk(**over) -> RetrievedChunk:
         doc_type="nav",
         text="The latest declared NAV of Motilal Oswal ELSS Tax Saver Fund is 41.70 per unit.",
         source_url="https://groww.in/mutual-funds/motilal-oswal-most-focused-long-term-fund-direct-growth",
-        source_as_of="2026-08-28",
+        source_as_of=_today_ist_iso(),
         similarity=0.9,
     )
     return RetrievedChunk(**{**defaults, **over})
@@ -108,7 +118,7 @@ class TestThinVerticalSlice:
 
         assert response.answered is True
         assert "41.70" in response.text
-        assert response.source_as_of == "2026-08-28"
+        assert response.source_as_of == _today_ist_iso()
         assert response.citation_url == NAV_CHUNK.source_url
         assert response.disclaimer == "Facts-only. No investment advice."
 

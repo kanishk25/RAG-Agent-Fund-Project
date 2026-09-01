@@ -1,0 +1,138 @@
+# Daily corpus refresh (P6, ARCH §8). Fetches every scheme, and — because a
+# git commit IS the publish step (ARCH §8.4) — commits the result only on a
+# successful run. A failed run leaves the repo (and therefore the Railway
+# deploy that auto-builds from it, docs/deployment.md §5) on the last good
+# index, untouched.
+name: daily-ingest
+
+on:
+  schedule:
+    # 06:30 UTC = 12:00 IST (India observes no daylight saving, so this offset
+    # never drifts). Chosen over an evening run for the more India-facing
+    # cadence; freshness verdicts are computed at QUERY time from
+    # `source_as_of` regardless of when ingest ran (guardrails/freshness.py),
+    # so this timing choice does not change what a query is gated on — only
+    # how many hours a genuinely new NAV waits before it's picked up.
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+    inputs:
+      scheme_id:
+        description: 'Ingest only this scheme (leave blank to refresh all 5)'
+        required: false
+        type: string
+
+# Never let two runs race each other's registry/index writes. `cancel-in-progress:
+# false` queues a second trigger rather than killing a run mid-commit — cancelling
+# partway through `db.session`'s transaction is exactly the kind of interruption
+# ARCH §8.2's "the commit is atomic" guarantee assumes cannot happen from outside.
+concurrency:
+  group: daily-ingest
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # commit-as-publish (ARCH §8.4)
+  issues: write      # failure-issue step (P6.7)
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # this job's own push needs real history, not a shallow one
+
+      - uses: actions/setup-python@v5
+        with:
+          # Matches .python-version / pyproject.toml's requires-python — see
+          # Phase 1's finding: onnxruntime (a chromadb dep) has no 3.14 wheels.
+          python-version: '3.13'
+          cache: pip
+
+      - name: Cache embedding model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          # Keyed on the pinned dependency file, not a hardcoded model name
+          # alone, so a future embedding-model change (pyproject.toml edit)
+          # busts the cache instead of silently reusing a stale download.
+          key: hf-embedding-model-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            hf-embedding-model-
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run ingestion
+        run: |
+          set -o pipefail
+          if [ -n "${{ inputs.scheme_id }}" ]; then
+            python -m mf_faq.ingest --scheme "${{ inputs.scheme_id }}" --json | tee ingest-report.json
+          else
+            python -m mf_faq.ingest --all --json | tee ingest-report.json
+          fi
+
+      # Runs before the commit step: a red exit here is what makes the
+      # workflow run red and skips the commit below — `if: success()` is the
+      # gate (ARCH §8.4's "a failed run exits non-zero before the commit step").
+      - name: Commit updated index if changed
+        if: success()
+        run: |
+          git config user.name "mf-faq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "no changes to commit — clean, green, no-op run"
+          else
+            git commit -m "chore(data): daily ingest $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
+
+      # Deliberately NOT gating the commit above: a stale NAV or a dead
+      # SEBI link is worth a human's attention, but it is not a reason to
+      # withhold today's genuinely fresher data for every OTHER fact this run
+      # did successfully refresh (checks.py's own docstring explains the
+      # per-check reasoning). `!cancelled()` — not `always()` — so this still
+      # runs after a failed ingest (there's a registry, just not a fresher
+      # one) but not after the job itself was cancelled.
+      - name: Missing-update checks (P6.6, ARCH §8.5)
+        if: ${{ !cancelled() }}
+        run: |
+          set -o pipefail
+          python -m mf_faq.ingest.checks --json | tee checks-report.json
+
+      # Job-failure email + red run history are already automatic (ARCH
+      # §8.5's "Actions gives three channels for free"); this adds the third
+      # — a durable, assignable record — without spamming a new issue every
+      # day of a multi-day outage.
+      - name: Raise or update failure issue
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const label = 'ingest-failure';
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const { data: existing } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: label,
+            });
+            if (existing.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing[0].number,
+                body: `Still failing: ${runUrl}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `Daily ingest failed — ${new Date().toISOString().slice(0, 10)}`,
+                body: `Run: ${runUrl}\n\nSee the run log for which check failed: ingestion itself, or a P6.6 missing-update alert (stale NAV/holdings, a failed-run streak, or a dead refusal link).`,
+                labels: [label],
+              });
+            }

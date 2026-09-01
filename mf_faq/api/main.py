@@ -29,6 +29,7 @@ requirement, generalised to the whole endpoint, not just the Groq call).
 from __future__ import annotations
 
 from contextlib import asynccontextmanager
+from datetime import date
 
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -38,6 +39,7 @@ from mf_faq import db, index_version
 from mf_faq.generation.answer import AnswerClient, build_answer_client
 from mf_faq.generation.pipeline import ask
 from mf_faq.generation.render import AskResponse, render_service_unavailable
+from mf_faq.guardrails.freshness import evaluate_freshness
 from mf_faq.logging_setup import configure_logging, get_logger
 from mf_faq.retrieval.search import Searcher, build_searcher
 from mf_faq.settings import get_settings, get_sources, validate_all_configs
@@ -72,6 +74,21 @@ class HealthResponse(BaseModel):
     index_committed_at: str | None
     documents: int
     schemes: int
+    disclaimer: str
+
+
+class FreshnessEntry(BaseModel):
+    scheme_id: str
+    doc_type: str
+    source_as_of: str
+    age: int
+    unit: str
+    verdict: str
+
+
+class FreshnessResponse(BaseModel):
+    documents: list[FreshnessEntry]
+    stale_count: int
     disclaimer: str
 
 
@@ -149,6 +166,37 @@ def health() -> HealthResponse:
         schemes=len(sources.schemes),
         disclaimer=DISCLAIMER,
     )
+
+
+@app.get("/freshness", response_model=FreshnessResponse)
+def freshness() -> FreshnessResponse:
+    """Per-`doc_type`, per-scheme `source_as_of` and staleness verdict,
+    read straight from the committed registry (P6.8, ARCH §8.5).
+
+    Reuses `guardrails.freshness.evaluate_freshness` rather than a second copy
+    of the staleness rules — the verdict shown here for a given fact is
+    exactly what a live query against that same fact would be gated on right
+    now (P4.3), not an approximation of it.
+    """
+    settings = get_settings()
+    sources = get_sources()
+    entries = []
+    for row in db.all_documents(settings.registry_db):
+        check = evaluate_freshness(
+            row["doc_type"], date.fromisoformat(row["source_as_of"]), sources=sources
+        )
+        entries.append(
+            FreshnessEntry(
+                scheme_id=row["scheme_id"],
+                doc_type=row["doc_type"],
+                source_as_of=row["source_as_of"],
+                age=check.age,
+                unit=check.unit,
+                verdict=check.verdict.value,
+            )
+        )
+    stale = sum(1 for e in entries if e.verdict != "fresh")
+    return FreshnessResponse(documents=entries, stale_count=stale, disclaimer=DISCLAIMER)
 
 
 @app.post("/ask", response_model=AskResponse)

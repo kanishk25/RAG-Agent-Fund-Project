@@ -1,0 +1,112 @@
+# External-to-daily-ingest freshness watchdog (P6.11, ARCH §15.6).
+#
+# `daily-ingest.yml` alerts loudly when IT runs and something's wrong. It has
+# no way to alert on the failure mode that matters more: itself not running
+# at all. GitHub Actions silently disables a scheduled workflow after 60 days
+# with no repo activity, and a workflow can also be individually disabled by
+# a maintainer (intentionally or by accident) with no notification to anyone
+# who isn't looking. This workflow is a second, independent schedule whose
+# only job is to ask "when did daily-ingest last actually succeed?" and file
+# an issue if the answer is "too long ago" — a question daily-ingest itself
+# cannot answer once it has gone quiet.
+#
+# Honest limitation, not fixed here: this is still an in-repo mitigation. If
+# the WHOLE repository goes dormant for 60 days, GitHub disables every
+# scheduled workflow in it together, this one included — so it cannot detect
+# the specific case of total repo abandonment. It closes the narrower, more
+# likely gap: daily-ingest failing to run while other activity (this very
+# workflow) keeps the repo "active" enough to keep both schedules alive. A
+# fully external heartbeat (a third-party uptime service pinging a
+# `GET /health`-style endpoint on a schedule) would be the complete fix and
+# is out of scope here.
+name: freshness-monitor
+
+on:
+  schedule:
+    # Twice a day is enough resolution against a 48h threshold (ARCH §15.6)
+    # without adding meaningful load.
+    - cron: '0 */12 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  actions: read   # to list daily-ingest's own run history
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check daily-ingest's last success
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const THRESHOLD_HOURS = 48;
+            const label = 'ingest-silent';
+
+            const { data } = await github.rest.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'daily-ingest.yml',
+              status: 'success',
+              per_page: 1,
+            });
+
+            if (data.workflow_runs.length === 0) {
+              console.log('No successful daily-ingest run found yet — nothing to compare against.');
+              return;
+            }
+
+            const lastRun = data.workflow_runs[0];
+            const ageHours = (Date.now() - new Date(lastRun.run_started_at).getTime()) / 36e5;
+            console.log(`Last successful daily-ingest run: ${lastRun.run_started_at} (${ageHours.toFixed(1)}h ago)`);
+
+            const { data: existing } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: label,
+            });
+
+            if (ageHours <= THRESHOLD_HOURS) {
+              // Recovered — close any open silent-failure issue rather than
+              // leaving a stale alert around once daily-ingest is healthy again.
+              for (const issue of existing) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  body: `Recovered: last successful run was ${ageHours.toFixed(1)}h ago.`,
+                });
+                await github.rest.issues.update({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                });
+              }
+              return;
+            }
+
+            const body = `No successful **daily-ingest** run in over ${THRESHOLD_HOURS}h ` +
+              `(last one: ${lastRun.run_started_at}, ~${ageHours.toFixed(1)}h ago).\n\n` +
+              `This means the scheduled workflow itself may be disabled, broken, or silently ` +
+              `not firing — check the Actions tab and \`.github/workflows/daily-ingest.yml\`'s ` +
+              `run history directly.`;
+
+            if (existing.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing[0].number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: 'daily-ingest has not succeeded in over 48h',
+                body,
+                labels: [label],
+              });
+            }

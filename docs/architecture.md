@@ -66,7 +66,7 @@ graph TB
     User --> UI --> API --> Guard --> RAG
     RAG --> Store
     RAG --> Claude
-    Sched -->|daily ~23:30 IST| AMFI & AMC & SEBI
+    Sched -->|daily ~12:00 IST| AMFI & AMC & SEBI
     Sched --> Store
 ```
 
@@ -283,9 +283,9 @@ The serving process never writes to Chroma. That single fact eliminates every re
 
 **A useful security consequence:** ingestion needs *no* `GROQ_API_KEY`. Embeddings are local (sentence-transformers), and the LLM is only involved at query time. The scheduled workflow therefore holds no model credentials at all — only a repo-scoped write token.
 
-**Trigger:** `cron: '0 18 * * *'` — **18:00 UTC = 23:30 IST**, after AMFI's NAV publication window (§4.5). Cron in Actions is always UTC.
+**Trigger:** `cron: '30 6 * * *'` — **06:30 UTC = 12:00 IST** (P6.1, decided over the originally-proposed post-NAV-publication evening slot). India observes no daylight saving, so this offset never drifts.
 
-> Actions may delay a scheduled run under load. That is safe here in one direction only: a delayed run fires *later*, never earlier, so it can never run before NAV publishes. A run that slips past midnight IST still records the correct `source_as_of` from the page.
+> This timing choice does not change correctness, only latency. The freshness gate (`guardrails/freshness.py`) is evaluated at QUERY time against `source_as_of`, not at ingest time — a NAV published the previous evening is picked up by the next Noon run exactly as validly as an evening run would have picked up the same day's NAV a few hours sooner. Moving the run earlier in the day means a genuinely new NAV sits unfetched for a few more hours before appearing in the corpus; it does not mean a stale NAV is ever served as current, because that judgment happens per-query against the registry's actual `source_as_of`, independent of when ingest last ran. A delayed Actions run (scheduled workflows can slip under load) is likewise safe: it fires *later*, never earlier, and still records whatever `source_as_of` the page shows at fetch time.
 
 ### 8.2 State persistence: the index lives in git
 
@@ -371,7 +371,7 @@ There is no window in which a partial index is visible, because the runner's wor
 name: daily-ingest
 on:
   schedule:
-    - cron: '0 18 * * *'      # 18:00 UTC = 23:30 IST, post-NAV-publication
+    - cron: '30 6 * * *'      # 06:30 UTC = 12:00 IST (P6.1)
   workflow_dispatch:           # manual trigger (§8.6)
     inputs:
       scheme_id:

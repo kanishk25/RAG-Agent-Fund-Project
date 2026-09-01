@@ -63,8 +63,9 @@ whole design (ARCH §8.4: "the git commit is the swap"), not an oversight.
   silently pick 3.14 and fail to resolve dependencies.
 - **`data/chroma/` and `data/registry.db`**, committed — the backend serves
   directly from what's in the repo. There is no ingestion step at deploy
-  time; the corpus is whatever was last committed by `mf-faq-ingest` (locally
-  or by the Phase 6 GitHub Actions workflow, once that exists).
+  time; the corpus is whatever was last committed by `mf-faq-ingest` — either
+  run locally, or by `.github/workflows/daily-ingest.yml` (Phase 6), which
+  runs daily at 12:00 IST and commits only on a successful, changed run.
 
 ### 1.2 Create the Railway service
 
@@ -224,10 +225,11 @@ Then in the browser, open `https://your-app.vercel.app` and:
 
 ## 5. Keeping the corpus fresh in production
 
-Phase 6 (not yet built) automates daily ingestion via GitHub Actions,
-committing an updated `data/` on change (ARCH §8.4 — "the git commit is the
-swap"). For that to actually reach production, the **serving side must pick
-up the new commit** (this is P6.10's open decision). With Railway:
+`.github/workflows/daily-ingest.yml` (Phase 6) runs the full ingestion
+pipeline daily at **12:00 IST** and, on a clean/successful run, commits an
+updated `data/` only when something actually changed (ARCH §8.4 — "the git
+commit is the swap"). For that to actually reach production, the **serving
+side must pick up the new commit** (P6.10). With Railway:
 
 - **Simplest, and the default once you connect the repo:** enable Railway's
   auto-deploy on push to the branch the daily workflow commits to. Every
@@ -239,9 +241,18 @@ up the new commit** (this is P6.10's open decision). With Railway:
   small — a redeploy on a committed index change is exactly the "publish"
   semantics ARCH §8.4 describes.
 
-Until Phase 6 exists, the corpus only updates when you run
-`mf-faq-ingest --all` locally and push the resulting `data/` changes
-yourself — which redeploys Railway the same way.
+**A manual, one-off refresh** (e.g. right after deploying, or to pick up a
+mid-day correction) doesn't require running anything locally: trigger
+`daily-ingest` by hand from the Actions tab (**Run workflow**, optionally
+naming one `scheme_id` to refresh only that scheme) — same code path as the
+schedule, same commit-then-redeploy effect on Railway.
+
+**Alerting:** `daily-ingest` also runs `python -m mf_faq.ingest.checks` after
+every ingest (P6.6, ARCH §8.5) — stale NAV/holdings, a failed-run streak, or
+a dead refusal link each turn the run red and file (or comment on) a GitHub
+issue labelled `ingest-failure`, independent of whether that day's data was
+still committed. `GET /freshness` on the deployed backend surfaces the same
+per-fact staleness a query would be gated on, for a quick manual check.
 
 **Rollback:** because the index is a git commit, reverting a bad ingest is
 `git revert <commit> && git push` — Railway redeploys the previous good
@@ -258,9 +269,11 @@ index" guarantee for the serving side too, not just for the Actions workflow.
   source without `.git`, `GET /health` will report `"unknown"` instead of a
   real SHA (`mf_faq/index_version.py` fails soft by design, so this degrades
   observability, not serving).
-- **No external freshness monitor yet** (ARCH §15.6 / P6.11) — if the daily
-  ingest workflow silently stops running, nothing here will page anyone.
-  Out of scope until Phase 6.
+- **No external freshness monitor yet** (ARCH §15.6 / P6.11) — GitHub Actions
+  disables a scheduled workflow after 60 days of repo inactivity, silently.
+  `daily-ingest` failing loudly (issue + red run) only helps if something is
+  still triggering it at all; nothing here pages anyone if it stops firing
+  entirely. Still open.
 - **Groq's free-tier budget (ARCH §15.4) applies in production exactly as it
   did in local eval** — ~8K TPM, ~200K tokens/day. A public URL getting real
   traffic can exhaust that budget faster than a single developer testing

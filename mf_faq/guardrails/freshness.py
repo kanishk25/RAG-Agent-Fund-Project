@@ -39,10 +39,15 @@ this gate decides refuse-vs-flag-vs-fresh, not what the sentence says.
 `age <= max_age_days` is fresh; only `age > max_age_days` trips the policy.
 Tested explicitly on both sides (F-03).
 
-**Timezone is pinned to IST** (F-07). The scheduler commits at 18:00 UTC —
-23:30 IST — and every `source_as_of` in the registry is an IST-local date
-(P2.5). Comparing "today" in UTC would shift the boundary by a day for several
-hours around midnight IST; `evaluate_freshness` always resolves "today" in IST.
+**Timezone is pinned to IST** (F-07). The scheduler runs at 06:30 UTC —
+12:00 IST (P6.1) — and every `source_as_of` in the registry is an IST-local
+date (P2.5). Comparing "today" in UTC would shift the boundary by a day for
+several hours around midnight IST; `evaluate_freshness` always resolves
+"today" in IST. The exact hour the scheduler runs at is otherwise not load-
+bearing here: this gate is evaluated at QUERY time against `source_as_of`,
+not at ingest time, so moving the run earlier or later in the day changes how
+many hours a freshly-published fact waits to be picked up, not whether any
+given query is correctly gated once it has been.
 
 **A future `source_as_of` always refuses**, overriding even an EXEMPT policy
 (F-04). P2.5 already rejects a future-dated fact at ingest — this is defence in
