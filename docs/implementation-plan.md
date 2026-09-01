@@ -377,27 +377,36 @@ If numeric accuracy on the golden set is unsatisfactory, this is where **ARCH §
 - [x] 6.10 Serving-side index reload — **decided and documented, not code.** `docs/deployment.md` §5: Railway's auto-deploy-on-push against the branch `daily-ingest` commits to. A committed index with nothing redeploying against it was called out as this phase's sharpest risk (see Risks, unchanged from the original plan) — closing it is a platform setting, not application code, so it lives in the deployment doc rather than here.
 - [x] 6.11 External freshness monitor — **DONE, as a second, independent workflow (`freshness-monitor.yml`), with an honest limitation stated up front.** Runs every 12h, queries the GitHub API for `daily-ingest`'s own last successful run, and opens (or closes, on recovery) an `ingest-silent`-labelled issue if none in 48h. **This does not fully close ARCH §15.6's gap**: GitHub disables *every* scheduled workflow in a repository together after 60 days of total repo inactivity, this monitor included — so it cannot detect the specific case of the whole repo going dormant. What it does close is the more likely failure: `daily-ingest` individually breaking or getting disabled while other activity keeps the repo (and therefore both schedules) alive. A fully external heartbeat service was out of scope — it would need a third-party account this environment has no way to provision.
 
-### ⚠️ Honest gap: nothing here has been observed running on GitHub's own infrastructure
+### ⚠️ Found and fixed while getting the first real run green: CI had never actually passed
 
-Every check above is either a unit test (offline, `httpx.MockTransport`, same discipline as every earlier phase) or a local dry run of the underlying commands. What has **not** been done, because it requires the workflow to actually exist on `main` and either wait for 12:00 IST or trigger it by hand from the Actions tab:
+Watching the first push land revealed `ci.yml` had been **failing on every commit since this repo's first one** — `pytest tests/ -q` (bare, no `-m`) can't import `tests.conftest` from three test files, because `tests/` has no `__init__.py` and pytest's default import mode only puts `tests/` itself on `sys.path`, not the repo root the absolute `from tests.conftest import ...` needs. Every local run in this project used `python -m pytest`, which prepends `cwd` automatically and masked this completely — there was simply no CI history to catch it in until this repo was pushed to GitHub in this phase. Fixed with `pythonpath = ["."]` in `pyproject.toml`'s `[tool.pytest.ini_options]`, verified locally with the exact bare `pytest tests/ -q` CI runs, then confirmed green on GitHub itself.
 
-- A real scheduled or `workflow_dispatch` run of `daily-ingest.yml` completing unattended on GitHub's runners.
-- A genuinely warm `actions/cache` hit (proving the ~90MB embedding-model download is skipped on a second run).
-- A real failure-issue being filed or commented on by either workflow against this actual repository.
-- `freshness-monitor.yml` observing a real gap (there isn't one yet — `daily-ingest` was just added).
+### A real run, observed on GitHub's own infrastructure, not simulated
 
-The design is verified — pure functions (`checks.py`), the workflow YAML parses and its bash logic was hand-traced for the specific bug the naive commit-then-push idiom has — but "verified by unit test" is not the same claim as "observed succeeding in production," and Phase 5's own honest-gap section drew exactly this distinction for the Groq call. The first real scheduled run, once this is pushed and merged, is the actual proof.
+Once CI was green, `daily-ingest.yml` was triggered by hand (`gh workflow run daily-ingest.yml`) and watched to completion — the actual proof this phase's design docs elsewhere insist on, not a claim resting on unit tests alone:
+
+- **Ingestion:** 35 facts attempted, 5 changed (fresh NAVs), 15 refreshed, 15 unchanged, 0 conflicts, 5 re-embedded, 0 failed schemes — a real fetch against live `groww.in` pages, not fixtures.
+- **Commit-as-publish worked for real:** `committed: true`, a real commit (`chore(data): daily ingest 2026-09-01T07:48:07Z`) pushed to `main` by the `mf-faq-bot` identity, containing exactly the `data/chroma` and `data/registry.db` deltas.
+- **Missing-update checks ran and returned `[]`** — zero alerts, which itself proves the live HEAD checks against every `motilaloswalmf.com` refusal link succeeded (P6.6's `check_link_health`), not merely that the code path was reachable.
+- **The failure-issue step correctly did not fire** (`if: failure()`, job succeeded) — its logic remains verified only by unit test (`tests/test_checks.py`), since nothing has actually failed yet to exercise it for real.
+- **`freshness-monitor.yml`** was also triggered by hand and completed successfully (no `daily-ingest` runs old enough yet to alert on, which is the correct outcome this early).
+
+What is still genuinely unverified, honestly:
+
+- The **schedule trigger itself** (`cron: '30 6 * * *'`) firing unattended at 12:00 IST — only `workflow_dispatch` has been exercised, though both share the identical job definition, so this is a narrow residual gap rather than an untested code path.
+- A **warm** `actions/cache` hit — this was the *first* run, so the embedding-model cache was necessarily a cold miss (populated, not yet reused). A second run is what would prove the ~90MB download is actually skipped.
+- A real failure-issue being filed or commented on — nothing has failed on GitHub yet to trigger it.
 
 ### Exit criteria
 
-- [x] Scheduled run completes unattended and commits an updated index — workflow is in place and its logic is unit-tested; not yet observed on a real GitHub-hosted run (see honest gap above)
-- [x] **Simulated mid-run failure commits nothing** — structural, not simulated end-to-end: the commit step's `if: success()` cannot execute after a non-zero ingestion exit, the same guarantee P2.8's all-or-nothing write already gives locally
-- [x] An unchanged corpus produces a **green** run with no commit — the single-branch diff check (6.2) handles this; "0 re-embeds" is P3's `store.sync()` guarantee, already verified live in Phase 3, unaffected by this phase
-- [x] Run log shows attempted / changed / failed per source — `runs` table, already populated by P2.8, unchanged here
-- [x] `workflow_dispatch` works, including the single-`scheme_id` path — the shell conditional was tested by hand (`inputs.scheme_id` empty vs. set) against the argparse contract; not yet exercised as a real dispatched run
-- [x] Failure issue is raised on a simulated dead educational link — `check_link_health`'s alert path is unit-tested (`tests/test_checks.py::TestLinkHealth`); the actual GitHub issue creation is untested against a live repo (honest gap)
-- [ ] Warm cache run does not re-download the embedding model — cache key is in place; unverifiable without a real second Actions run (honest gap)
-- [x] The serving API demonstrably picks up a new index commit (6.10) — decided and documented (Railway auto-deploy), not independently re-verified here since deployment.md's own verification pass already covers it
+- [x] Scheduled run completes unattended and commits an updated index — **observed for real** via `workflow_dispatch` (see above); the cron-triggered path itself is still unexercised, sharing the same job definition
+- [x] **Simulated mid-run failure commits nothing** — structural (the commit step's `if: success()` cannot execute after a non-zero ingestion exit), matching P2.8's existing all-or-nothing guarantee; not separately re-forced with an injected live failure
+- [x] An unchanged corpus produces a **green** run with no commit — the single-branch diff check (6.2) handles this; a second real run (not yet triggered) would show 0 changed / no commit, mirroring what Phase 2/3 already proved locally
+- [x] Run log shows attempted / changed / failed per source — confirmed in the real run's own JSON output (`sources_attempted: 35, sources_changed: 20, sources_failed: 0`)
+- [x] `workflow_dispatch` works, including the single-`scheme_id` path — the no-`scheme_id` path is now observed for real; the single-scheme branch was traced by hand against the argparse contract, not separately dispatched
+- [x] Failure issue is raised on a simulated dead educational link — unit-tested (`tests/test_checks.py::TestLinkHealth`); real issue creation remains unexercised since nothing has failed yet
+- [ ] Warm cache run does not re-download the embedding model — cache key is in place and the first (necessarily cold) run populated it; a warm hit needs a second run to observe
+- [x] The serving API demonstrably picks up a new index commit (6.10) — decided and documented (Railway auto-deploy); not independently re-verified here since deployment.md's own verification pass already covers it
 
 ### Risks
 
